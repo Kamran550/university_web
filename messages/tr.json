@@ -1,0 +1,636 @@
+{
+  "common": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "fees": "Ücretler ve Burslar",
+    "programs": "Programlar",
+    "news": "Haberler",
+    "contact": "İletişim",
+    "apply": "Başvur",
+    "readMore": "Daha fazla oku",
+    "learnMore": "Daha fazla öğren",
+    "back": "Geri",
+    "search": "Ara",
+    "all": "Tümü",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "submit": "Gönder",
+    "cancel": "İptal"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "fees": "Ücretler",
+    "programs": "Programlar",
+    "news": "Haberler",
+    "contact": "İletişim",
+    "apply": "Başvur"
+  },
+  "hero": {
+    "title": "Dünya Standartlarında Eğitimle Geleceğinizi Şekillendirin",
+    "subtitle": "Küresel öğrenci topluluğuna katılın ve yarının lideri olmak için gerekli becerileri kazanın. 2025 Güz dönemi başvuruları şimdi açık.",
+    "primaryButton": "Şimdi Başvur",
+    "secondaryButton": "Programları Keşfet"
+  },
+  "aboutPreview": {
+    "title": "Hakkımızda",
+    "description": "Avrupa Uluslararası Barış Üniversitesi (EIPU), eğitim ve küresel anlayış yoluyla barışı teşvik etmeye adanmış yenilikçi bir yüksek öğretim kurumudur. Öğrencilerimize dünyada olumlu değişiklikler yaratmak için gerekli bilgi ve becerileri sağlıyoruz.",
+    "button": "Daha Fazla Bilgi"
+  },
+  "statistics": {
+    "title": "Rakamlarla Etkimiz",
+    "subtitle": "Kaliteli eğitim ve küresel ortaklıklar yoluyla mükemmellik inşa ediyoruz",
+    "students": "Öğrenci",
+    "countries": "Ülke",
+    "programs": "Program",
+    "satisfaction": "Memnuniyet",
+    "international lecturers": "Uluslararası Öğretim Görevlileri",
+    "years of excellence": "Yıllık Mükemmellik"
+  },
+  "teachers": {
+    "title": "Öğretim Kadromuz",
+    "subtitle": "Deneyimli ve uzman akademik kadromuzla tanışın"
+  },
+  "testimonials": {
+    "title": "Öğrencilerimiz Ne Diyor",
+    "subtitle": "Mezunlarımızdan başarı hikayeleri"
+  },
+  "cta": {
+    "title": "Geleceğinize Yatırım Yapın",
+    "description": "Küresel liderlerin yetiştiği üniversiteye katılın. Başvuru süreci basit ve hızlıdır.",
+    "button": "Şimdi Başvur",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "language": {
+    "az": "Azərbaycan",
+    "en": "English",
+    "tr": "Türkçe"
+  },
+  "about": {
+    "hero": {
+      "title": "Avrupa Uluslararası Barış Üniversitesi Hakkında",
+      "subtitle": "Eğitim ve küresel işbirliği yoluyla zihinleri güçlendirmek, barış inşa etmek ve yarının liderlerini şekillendirmek."
+    },
+    "missionVision": {
+      "title": "Misyonumuz ve Vizyonumuz",
+      "subtitle": "Eğitim yoluyla mükemmellik, yenilik ve küresel barışa bağlılığımız",
+      "mission": {
+        "title": "Misyonumuz",
+        "description": "Öğrencilerin etik liderler, eleştirel düşünürler ve kendi topluluklarında ve ötesinde olumlu değişim ajanları olmalarını sağlayan dünya standartlarında eğitim sağlamak. Kültürler ve uluslar arasında barış, anlayış ve işbirliğini teşvik etmeye adanmışız."
+      },
+      "vision": {
+        "title": "Vizyonumuz",
+        "description": "Akademik mükemmellik, yenilikçi araştırma ve barış eğitimine bağlılığımızla tanınan önde gelen uluslararası üniversite olmak. Eğitimin farklılıkları kapattığı, anlayış yarattığı ve herkes için sürdürülebilir gelecekler inşa ettiği bir dünya hayal ediyoruz."
+      },
+      "coreValues": {
+        "title": "Temel Değerler",
+        "items": {
+          "excellence": "Öğretim ve öğrenmede mükemmellik",
+          "globalCitizenship": "Küresel vatandaşlık ve barış",
+          "diversity": "Çeşitlilik ve kapsayıcılık",
+          "innovation": "Yenilik ve araştırma",
+          "ethicalLeadership": "Etik liderlik"
+        }
+      }
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "subtitle": "EIPU'da yaptığımız her şeyi yönlendiren ilkeler",
+      "items": {
+        "academicExcellence": {
+          "title": "Akademik Mükemmellik",
+          "description": "Öğrencileri tam potansiyellerine ulaşmaya teşvik etmek ve meydan okumak için tasarlanmış titiz akademik programlar."
+        },
+        "globalPerspective": {
+          "title": "Küresel Perspektif",
+          "description": "Çeşitli kültürel deneyimler ve küresel ortaklıklar yoluyla uluslararası anlayış ve işbirliğini teşvik etmek."
+        },
+        "inclusiveCommunity": {
+          "title": "Kapsayıcı Topluluk",
+          "description": "Her öğrencinin değerli, saygılı ve başarılı olmak için güçlü hissettiği sıcak bir ortam oluşturmak."
+        },
+        "innovation": {
+          "title": "Yenilik",
+          "description": "Gerçek dünya zorluklarına yanıt veren ve ilerlemeyi teşvik eden yaratıcı düşünce ve en son araştırmaları teşvik etmek."
+        },
+        "integrity": {
+          "title": "Dürüstlük",
+          "description": "Tüm çabalarımızda etik davranış, dürüstlük ve sorumluluğun en yüksek standartlarını korumak."
+        },
+        "excellence": {
+          "title": "Mükemmellik",
+          "description": "Eğitim, araştırma ve toplum hizmetinde sürekli iyileştirme ve kriterler belirleme çabası."
+        }
+      }
+    },
+    "history": {
+      "title": "Tarihimiz",
+      "subtitle": "Büyüme, mükemmellik ve barış eğitimine bağlılığın yolculuğu",
+      "milestones": {
+        "2020": {
+          "title": "Kuruluş",
+          "description": "Avrupa Uluslararası Barış Üniversitesi, barış eğitimi ve küresel vatandaşlığa adanmış dünya standartlarında bir kurum yaratma vizyonuyla kuruldu."
+        },
+        "2021": {
+          "title": "İlk Mezunlar",
+          "description": "Akademik mükemmelliğe doğru yolculuğumuzda önemli bir dönüm noktasını işaretleyerek ilk mezun sınıfımızı gururla kutladık."
+        },
+        "2022": {
+          "title": "Uluslararası Tanınma",
+          "description": "EIPU akreditasyon aldı ve dünya çapında önde gelen üniversitelerle ortaklıklar kurarak küresel erişimimizi genişletti."
+        },
+        "2023": {
+          "title": "Genişleme",
+          "description": "50'den fazla ülkeden öğrenci ağırlayarak programlarımızı ve tesislerimizi genişlettik ve çeşitliliğe bağlılığımızı güçlendirdik."
+        }
+      }
+    }
+  },
+  "fees": {
+    "hero": {
+      "title": "Öğrenim Ücretleri ve Ödeme Planları",
+      "subtitle": "Esnek ödeme seçenekleri ile uygun fiyatlı eğitim. Kaliteli eğitimi erişilebilir kılmak için tasarlanmış rekabetçi öğrenim ücretlerimizi, ödeme planlarımızı ve burs fırsatlarımızı keşfedin."
+    },
+    "priceTable": {
+      "title": "Program Ücretleri",
+      "subtitle": "Tüm akademik programlarımız için şeffaf fiyatlandırma",
+      "mostPopular": "En Popüler",
+      "year": "/yıl",
+      "total": "Toplam",
+      "note": "* Tüm ücretler değişiklik gösterebilir. Belirli programlar için ek ücretler uygulanabilir. Detaylı bilgi için bizimle iletişime geçin.",
+      "programs": {
+        "bachelors": {
+          "name": "Lisans Derecesi",
+          "duration": "4 Yıl",
+          "features": [
+            "Tam zamanlı eğitim",
+            "Tüm tesislere erişim",
+            "Kütüphane erişimi",
+            "Kariyer danışmanlığı",
+            "Öğrenci destek hizmetleri"
+          ]
+        },
+        "masters": {
+          "name": "Yüksek Lisans Derecesi",
+          "duration": "2 Yıl",
+          "features": [
+            "Tam zamanlı eğitim",
+            "Araştırma fırsatları",
+            "Tez danışmanlığı",
+            "Kütüphane erişimi",
+            "Kariyer danışmanlığı",
+            "Mezunlar ağı"
+          ]
+        },
+        "doctoral": {
+          "name": "Doktora Programı",
+          "duration": "3-4 Yıl",
+          "features": [
+            "Tam zamanlı eğitim",
+            "Araştırma finansmanı",
+            "Tez danışmanlığı",
+            "Yayın desteği",
+            "Konferans katılımı",
+            "Kütüphane erişimi",
+            "Kariyer danışmanlığı"
+          ]
+        },
+        "online": {
+          "name": "Online Programlar",
+          "duration": "2-4 Yıl",
+          "features": [
+            "Esnek program",
+            "Online kütüphane erişimi",
+            "Sanal dersler",
+            "Öğrenci desteği",
+            "Dijital kaynaklar"
+          ]
+        }
+      }
+    },
+    "paymentPlans": {
+      "title": "Esnek Ödeme Planları",
+      "subtitle": "Size en uygun ödeme planını seçin. Eğitimi uygun fiyatlı hale getirmek için çeşitli seçenekler sunuyoruz.",
+      "recommended": "Önerilen",
+      "off": "İndirim",
+      "customTerms": "Özel Şartlar",
+      "contact": "Ödeme Detayları için İletişime Geçin",
+      "plans": {
+        "fullPayment": {
+          "name": "Tam Ödeme",
+          "description": "Tüm öğrenim ücretini peşin ödeyin ve tasarruf edin",
+          "benefits": [
+            "Toplam ücrette %10 indirim",
+            "Aylık ödeme yok",
+            "Öncelikli ders kaydı",
+            "Basitleştirilmiş faturalama süreci"
+          ]
+        },
+        "semesterPayment": {
+          "name": "Dönem Ödemesi",
+          "description": "Dönem başına ödeyin (yılda 2 ödeme)",
+          "benefits": [
+            "Dönem başına %5 indirim",
+            "Yönetilebilir ödemeler",
+            "Esnek programlama",
+            "Standart ders kaydı"
+          ]
+        },
+        "monthlyPayment": {
+          "name": "Aylık Ödeme",
+          "description": "Ödemeleri 10 ay boyunca yayın",
+          "benefits": [
+            "Faizsiz ödemeler",
+            "10 eşit aylık taksit",
+            "Bütçe dostu seçenek",
+            "Otomatik ödeme kurulumu"
+          ]
+        },
+        "installmentPlan": {
+          "name": "Taksit Planı",
+          "description": "İhtiyaçlarınıza göre özel ödeme planı",
+          "benefits": [
+            "Esnek ödeme şartları",
+            "Kişiselleştirilmiş program",
+            "Faizsiz seçenekler",
+            "Mali danışmanlık mevcut"
+          ]
+        }
+      }
+    },
+    "scholarships": {
+      "title": "Burslar ve Mali Yardım",
+      "subtitle": "Eğitiminizi daha uygun fiyatlı hale getirmek için çeşitli burslar sunuyoruz. Burs fırsatlarımızı keşfedin.",
+      "coverage": "Kapsam",
+      "eligibility": "Uygunluk",
+      "applicationDeadline": "Başvuru Son Tarihi",
+      "apply": "Burslar için Başvur",
+      "items": {
+        "academicExcellence": {
+          "name": "Akademik Mükemmellik",
+          "description": "Üstün akademik başarılar ve olağanüstü performans için",
+          "eligibility": [
+            "GPA 3.5 veya daha yüksek",
+            "Güçlü tavsiye mektupları",
+            "Akademik başarılar",
+            "Mülakat gerekli"
+          ]
+        },
+        "meritBased": {
+          "name": "Liyakata Dayalı",
+          "description": "Çeşitli alanlarda olağanüstü yetenek ve adanmışlık için tanınma",
+          "eligibility": [
+            "Kanıtlanmış liyakat",
+            "Portföy veya başarılar",
+            "Tavsiye mektupları",
+            "Başvuru değerlendirmesi"
+          ]
+        },
+        "needBased": {
+          "name": "İhtiyaca Dayalı",
+          "description": "Ekonomik zorluklarla karşılaşan öğrenciler için mali yardım",
+          "eligibility": [
+            "Mali ihtiyaç belgeleri",
+            "Hane geliri değerlendirmesi",
+            "Akademik durum korunur",
+            "Başvuru gerekli"
+          ]
+        },
+        "internationalStudents": {
+          "name": "Uluslararası Öğrenciler",
+          "description": "Topluluğumuza katılan uluslararası öğrenciler için özel destek",
+          "eligibility": [
+            "Yerleşik olmayan öğrenci",
+            "Akademik mükemmellik",
+            "İngilizce yeterliliği",
+            "Kültürel katkı"
+          ]
+        },
+        "researchFellowships": {
+          "name": "Araştırma Bursları",
+          "description": "Yenilikçi araştırma projelerinde yer alan lisansüstü öğrenciler için",
+          "eligibility": [
+            "Lisansüstü öğrenci statüsü",
+            "Araştırma önerisi",
+            "Fakülte tavsiyesi",
+            "Araştırma potansiyeli"
+          ]
+        }
+      }
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "subtitle": "Ücretler, ödemeler ve mali yardım hakkında yaygın soruların cevaplarını bulun",
+      "contact": "Hala sorularınız var mı? Yardımcı olmaya hazırız!",
+      "contactLink": "Mali Ofisimizle İletişime Geçin →",
+      "items": {
+        "q1": {
+          "question": "Öğrenim ücretine neler dahildir?",
+          "answer": "Öğrenim ücretleri tüm akademik dersleri, üniversite tesislerine erişimi (kütüphane, laboratuvarlar, bilgisayar laboratuvarları), öğrenci destek hizmetlerini ve temel öğrenci etkinliklerini içerir. Belirli programlar, materyaller veya isteğe bağlı hizmetler için ek ücretler uygulanabilir."
+        },
+        "q2": {
+          "question": "Ücretlerimi taksitle ödeyebilir miyim?",
+          "answer": "Evet, dönem ödemeleri, aylık taksitler (10 ay) ve özel ödeme planları dahil olmak üzere esnek ödeme planları sunuyoruz. Tüm taksit planları için faizsiz seçenekler mevcuttur. Daha fazla bilgi için mali ofisimizle iletişime geçin."
+        },
+        "q3": {
+          "question": "Ek ücretler var mı?",
+          "answer": "Ek ücretler başvuru ücreti, kayıt ücreti, öğrenci hizmet ücreti ve belirli programla ilgili maliyetleri (malzemeler, saha gezileri vb.) içerebilir. Tüm ücretler kabul mektubunuzda ve öğrenci el kitabında açıkça belirtilmiştir."
+        },
+        "q4": {
+          "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+          "answer": "Banka havaleleri, kredi/banka kartları ve online ödeme platformlarını kabul ediyoruz. Uluslararası öğrenciler ayrıca havale kullanabilir. Ödeme detayları ve talimatları kayıt sırasında sağlanacaktır."
+        },
+        "q5": {
+          "question": "Çekilirsem geri ödeme alabilir miyim?",
+          "answer": "Geri ödeme politikaları programa ve çekilme zamanına göre değişir. Genel olarak, geri ödemeler dönemin ilk birkaç haftasında mevcuttur ve miktarlar zamanla azalır. Tam geri ödeme politikaları kayıt sözleşmenizde belirtilmiştir."
+        },
+        "q6": {
+          "question": "Burslar yenilenebilir mi?",
+          "answer": "Çoğu burs, akademik performansı korumaya (genellikle GPA 3.0 veya daha yüksek), tam zamanlı kayıt ve iyi durumda olmaya dayalı olarak yıllık olarak yenilenebilir. Belirli yenileme gereksinimleri burs ödül mektubunuzda belirtilmiştir."
+        },
+        "q7": {
+          "question": "Birden fazla bursa başvurabilir miyim?",
+          "answer": "Evet, birden fazla bursa başvurabilirsiniz. Ancak, toplam mali yardım (burslar, hibeler ve diğer yardımlar dahil) katılımın toplam maliyetini aşamaz. Mali yardım paketinizi maksimize etmek için sizinle çalışacağız."
+        },
+        "q8": {
+          "question": "Ücretler ne zaman ödenmelidir?",
+          "answer": "Ücret ödeme son tarihleri ödeme planına göre değişir. Tam ödeme her dönemin başlangıcından önce ödenmelidir. Dönem ödemeleri her dönemin başlangıcında ödenmelidir. Aylık taksitler Eylül'de başlar ve 10 ay devam eder. Belirli tarihler kayıt paketinizde sağlanır."
+        },
+        "q9": {
+          "question": "Erken ödeme için indirim sunuyor musunuz?",
+          "answer": "Evet, tam peşin ödeme için %10 ve dönem ödemeleri için %5 indirim sunuyoruz. Bu indirimler yalnızca öğrenim ücretlerine uygulanır ve tüm öğrenciler için mevcuttur. Erken ödeme indirimleri hakkında daha fazla bilgi için bizimle iletişime geçin."
+        },
+        "q10": {
+          "question": "Zamanında ödeyemezsem ne olur?",
+          "answer": "Mali zorluklar yaşıyorsanız, lütfen derhal mali ofisimizle iletişime geçin. Ödeme planı değişiklikleri, acil yardım ve mali danışmanlık sunuyoruz. Önceden düzenleme yapılmazsa gecikme ücretleri uygulanabilir."
+        }
+      }
+    }
+  },
+  "programs": {
+    "hero": {
+      "title": "Akademik Programlar",
+      "subtitle": "Seçtiğiniz alanda başarı için tasarlanmış lisans, lisansüstü ve profesyonel programlarımızın kapsamlı yelpazesini keşfedin."
+    },
+    "grid": {
+      "title": "Programlarımız",
+      "subtitle": "Akademik ve profesyonel programlarımızın çeşitli yelpazesini keşfedin",
+      "searchPlaceholder": "Programları ara...",
+      "found": "Bulundu",
+      "programs": "program",
+      "programsPlural": "program",
+      "noResults": "Kriterlerinize uygun program bulunamadı.",
+      "clearFilters": "Filtreleri Temizle",
+      "featuredProgram": "Öne Çıkan Program",
+      "keyFeatures": "Temel Özellikler:",
+      "careerPaths": "Kariyer Yolları:",
+      "more": "daha fazla",
+      "learnMore": "Daha Fazla Bilgi",
+      "apply": "Başvur"
+    },
+    "details": {
+      "backToPrograms": "Programlara Dön",
+      "featured": "Öne Çıkan",
+      "duration": "Süre",
+      "degreeType": "Derece Türü",
+      "category": "Kategori",
+      "programFeatures": "Program Özellikleri",
+      "careerOpportunities": "Kariyer Fırsatları",
+      "readyToApply": "Başvurmaya Hazır mısınız?",
+      "applyDescription": "{title} programı için başvurunuzu bugün başlatın.",
+      "applyNow": "Şimdi Başvur",
+      "contactAdmissions": "Kabul Ofisi ile İletişim",
+      "questions": "Sorularınız mı var? Kişisel rehberlik için kabul ofisimizle iletişime geçin."
+    },
+    "categories": {
+      "all": "Tüm Programlar",
+      "undergraduate": "Lisans",
+      "graduate": "Lisansüstü",
+      "doctoral": "Doktora",
+      "online": "Online",
+      "professional": "Profesyonel"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "Haberler ve Güncellemeler",
+      "subtitle": "Avrupa Uluslararası Barış Üniversitesi'ndeki en son haberler, etkinlikler, duyurular ve başarılar hakkında bilgi sahibi olun."
+    },
+    "grid": {
+      "featuredNews": "Öne Çıkan Haberler",
+      "featured": "Öne Çıkan",
+      "allNews": "Tüm Haberler",
+      "searchPlaceholder": "Haberleri ara...",
+      "found": "Bulundu",
+      "article": "makale",
+      "articles": "makale",
+      "noResults": "Kriterlerinize uygun haber makalesi bulunamadı.",
+      "clearFilters": "Filtreleri Temizle",
+      "readMore": "Daha Fazla Oku",
+      "min": "dk"
+    },
+    "detail": {
+      "backToNews": "Haberlere Dön",
+      "backToAllNews": "Tüm Haberlere Dön",
+      "featured": "Öne Çıkan",
+      "minRead": "dk okuma",
+      "share": "Paylaş",
+      "tags": "Etiketler:",
+      "relatedNews": "İlgili Haberler",
+      "linkCopied": "Link panoya kopyalandı!"
+    },
+    "newsletter": {
+      "title": "Güncel Kalın",
+      "description": "Bültenimize abone olun ve EIPU'dan önemli haberleri, etkinlikleri ve güncellemeleri kaçırmayın.",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "subscribe": "Abone Ol",
+      "thankYou": "Abone olduğunuz için teşekkürler!",
+      "successMessage": "En son haberlerimizi ve güncellemelerimizi alacaksınız.",
+      "privacy": "Gizliliğinize saygı duyuyoruz. İstediğiniz zaman aboneliği iptal edebilirsiniz."
+    },
+    "categories": {
+      "all": "Tüm Haberler",
+      "university": "Üniversite",
+      "events": "Etkinlikler",
+      "announcements": "Duyurular",
+      "academic": "Akademik",
+      "student-life": "Öğrenci Yaşamı"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "İletişime Geçin",
+      "subtitle": "Yardımcı olmaya hazırız! Aşağıdaki kanallardan herhangi biri ile bizimle iletişime geçin. Ekibimiz sorularınızı yanıtlamaya ve eğitim yolculuğunuzda size yardımcı olmaya hazırdır."
+    },
+    "info": {
+      "title": "İletişime Geçin",
+      "subtitle": "Bize ulaşmanın en iyi yolunu seçin. Yardımcı olmaya hazırız!",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "address": "Adres",
+      "admissions": "Kabul:",
+      "support": "Destek:",
+      "officeHours": "Ofis Saatleri",
+      "hours": {
+        "weekdays": "Pazartesi - Cuma: 09:00 - 18:00",
+        "saturday": "Cumartesi: 10:00 - 16:00",
+        "sunday": "Pazar: Kapalı"
+      }
+    },
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "subtitle": "Aşağıdaki formu doldurun ve size en kısa sürede geri döneceğiz.",
+      "success": "Teşekkürler! Mesajınız başarıyla gönderildi. Size yakında geri döneceğiz.",
+      "name": "Ad Soyad *",
+      "namePlaceholder": "Ahmet Yılmaz",
+      "email": "E-posta *",
+      "emailPlaceholder": "ahmet@example.com",
+      "phone": "Telefon (İsteğe Bağlı)",
+      "phonePlaceholder": "+994 50 123 4567",
+      "subject": "Konu *",
+      "subjectPlaceholder": "Genel soru",
+      "message": "Mesaj *",
+      "messagePlaceholder": "Mesajınızı buraya yazın...",
+      "sending": "Gönderiliyor...",
+      "sendMessage": "Mesaj Gönder",
+      "privacy": "Bu formu göndererek gizlilik politikamızı kabul etmiş olursunuz.",
+      "viewFAQ": "SSS'ye Bak",
+      "validation": {
+        "nameMin": "Ad en az 2 karakter olmalıdır",
+        "emailInvalid": "Geçersiz e-posta adresi",
+        "subjectMin": "Konu en az 3 karakter olmalıdır",
+        "messageMin": "Mesaj en az 10 karakter olmalıdır"
+      }
+    },
+    "map": {
+      "title": "Bizi Bulun",
+      "subtitle": "Kampüsümüzü ziyaret edin veya aşağıdaki haritayı kullanarak yol tarifi alın.",
+      "campusAddress": "Kampüs Adresi",
+      "getDirections": "Yol Tarifi Al"
+    },
+    "social": {
+      "followUs": "Bizi Takip Edin",
+      "subtitle": "Sosyal medyada bizimle bağlantıda kalın",
+      "haveQuestions": "Sorularınız mı Var?",
+      "faqDescription": "Yaygın sorulara hızlı cevaplar için Sıkça Sorulan Sorular bölümümüze bakın.",
+      "viewFAQ": "SSS'ye Bak"
+    }
+  },
+  "footer": {
+    "description": "Avrupa Uluslararası Barış Üniversitesi - Eğitim, barış ve kültürü birleştiren uluslararası bir üniversite.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "contact": "İletişim",
+    "university": "Üniversite",
+    "links": {
+      "about": "Hakkımızda",
+      "programs": "Programlar",
+      "fees": "Ücretler",
+      "contact": "İletişim",
+      "apply": "Başvur"
+    },
+    "universityLinks": {
+      "academicPrograms": "Akademik Programlar",
+      "researchInnovation": "Araştırma ve Yenilik",
+      "studentLife": "Öğrenci Yaşamı",
+      "admissions": "Kabul"
+    },
+    "copyright": "© {year} Avrupa Uluslararası Barış Üniversitesi. Tüm hakları saklıdır.",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Hizmet Şartları"
+  },
+  "apply": {
+    "hero": {
+      "title": "EIPU'ya Başvurun",
+      "subtitle": "Akademik yolculuğunuza bizimle başlayın. Derece programınızı seçin ve başvurunuzu bugün başlatın."
+    },
+    "applicantType": {
+      "title": "Başvuru türüm",
+      "subtitle": "Lütfen başvuru türünüzü seçin",
+      "student": "Öğrenci",
+      "studentDesc": "Bireysel öğrenci olarak başvurun",
+      "agency": "Ajans",
+      "agencyDesc": "Bir eğitim ajansı adına başvurun",
+      "continue": "Devam et"
+    },
+    "degreeSelector": {
+      "title": "Derece Programınızı Seçin",
+      "subtitle": "Başvurmak istediğiniz derece programını seçin",
+      "loading": "Dereceler yükleniyor...",
+      "error": "Dereceler yüklenemedi",
+      "retry": "Yeniden Dene",
+      "noDegrees": "Şu anda mevcut derece programı bulunmamaktadır.",
+      "selected": "Seçilen Derece"
+    },
+    "facultySelector": {
+      "title": "Fakültenizi Seçin",
+      "subtitle": "Mevcut seçeneklerden istediğiniz fakülteyi seçin",
+      "noFaculties": "Bu derece için fakülte bulunmamaktadır.",
+      "selected": "Seçilen Fakülte"
+    },
+    "navigation": {
+      "back": "Geri",
+      "continue": "Devam et",
+      "submit": "Başvuruyu Gönder"
+    },
+    "studentForm": {
+      "title": "Öğrenci Başvuru Formu",
+      "personalInfo": "Kişisel Bilgiler",
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "fatherName": "Baba Adı",
+      "gender": "Cinsiyet",
+      "male": "Erkek",
+      "female": "Kadın",
+      "other": "Diğer",
+      "dateOfBirth": "Doğum Tarihi",
+      "placeOfBirth": "Doğum Yeri (Ülke)",
+      "nationality": "Uyruk",
+      "nativeLanguage": "Ana Dil",
+      "phone": "Telefon Numarası",
+      "email": "E-posta",
+      "identification": "Kimlik",
+      "photoId": "Kimlik Belgesi Kopyası (resim/pdf)",
+      "profilePhoto": "Profil Fotoğrafı (resim)",
+      "address": "Adres",
+      "country": "Ülke",
+      "city": "Şehir",
+      "addressLine": "Adres Satırı",
+      "educationDocuments": "Eğitim Belgeleri",
+      "diploma": "Lise Diploması (jpg/pdf)",
+      "transcript": "Lise Transkripti (jpg/pdf)",
+      "programChoice": "Program Seçimi",
+      "faculty": "Fakülte",
+      "required": "Zorunlu alan",
+      "invalidEmail": "Geçersiz e-posta adresi",
+      "submitting": "Gönderiliyor...",
+      "submit": "Başvuruyu Gönder",
+      "submitSuccess": "Başvuru başarıyla gönderildi!",
+      "submitError": "Başvuru gönderilemedi. Lütfen tekrar deneyin."
+    },
+    "agencyForm": {
+      "title": "Ajans Başvuru Formu",
+      "agencyInfo": "Ajans Bilgileri",
+      "agencyName": "Ajans Adı",
+      "country": "Ülke",
+      "city": "Şehir",
+      "address": "Adres",
+      "website": "Web Sitesi (isteğe bağlı)",
+      "contactPerson": "İletişim Kişisi",
+      "contactName": "İletişim Kişisinin Tam Adı",
+      "contactPhone": "İletişim Kişisinin Telefonu",
+      "contactEmail": "İletişim Kişisinin E-postası",
+      "agencyIdentification": "Ajans Kimliği",
+      "businessLicense": "İş Lisansı (pdf/resim)",
+      "companyLogo": "Şirket Logosu (isteğe bağlı)",
+      "programChoice": "Program Seçimi",
+      "faculty": "Fakülte",
+      "required": "Zorunlu alan",
+      "invalidEmail": "Geçersiz e-posta adresi",
+      "submitting": "Gönderiliyor...",
+      "submit": "Başvuruyu Gönder",
+      "submitSuccess": "Başvuru başarıyla gönderildi!",
+      "submitError": "Başvuru gönderilemedi. Lütfen tekrar deneyin."
+    }
+  }
+}

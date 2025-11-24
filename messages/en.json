@@ -1,0 +1,636 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "fees": "Fees & Scholarships",
+    "programs": "Programs",
+    "news": "News",
+    "contact": "Contact",
+    "apply": "Apply",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "back": "Back",
+    "search": "Search",
+    "all": "All",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "fees": "Fees",
+    "programs": "Programs",
+    "news": "News",
+    "contact": "Contact",
+    "apply": "Apply"
+  },
+  "hero": {
+    "title": "Shape Your Future with a World-Class Education",
+    "subtitle": "Join a global community of learners and gain the skills to lead tomorrow. Admissions are now open for the Fall 2025 intake.",
+    "primaryButton": "Apply Now",
+    "secondaryButton": "Explore Programs"
+  },
+  "aboutPreview": {
+    "title": "About Us",
+    "description": "European International Peace University (EIPU) is an innovative higher education institution dedicated to fostering peace through education and global understanding. We provide our students with the knowledge and skills necessary to make positive changes in the world.",
+    "button": "Learn More"
+  },
+  "statistics": {
+    "title": "Our Impact in Numbers",
+    "subtitle": "Building excellence through quality education and global partnerships",
+    "students": "Students",
+    "countries": "Countries",
+    "programs": "Programs",
+    "satisfaction": "Satisfaction",
+    "international lecturers": "International Lecturers",
+    "years of excellence": "Years of Excellence"
+  },
+  "teachers": {
+    "title": "Our Faculty",
+    "subtitle": "Meet our experienced and specialized academic staff"
+  },
+  "testimonials": {
+    "title": "What Our Students Say",
+    "subtitle": "Success stories from our graduates"
+  },
+  "cta": {
+    "title": "Invest in Your Future",
+    "description": "Join the university where global leaders are formed. The application process is simple and fast.",
+    "button": "Apply Now",
+    "learnMore": "Learn More"
+  },
+  "language": {
+    "az": "Azərbaycan",
+    "en": "English",
+    "tr": "Türkçe"
+  },
+  "about": {
+    "hero": {
+      "title": "About European International Peace University",
+      "subtitle": "Empowering minds, building peace, and shaping tomorrow's leaders through excellence in education and global collaboration."
+    },
+    "missionVision": {
+      "title": "Our Mission & Vision",
+      "subtitle": "Committed to excellence, innovation, and global peace through education",
+      "mission": {
+        "title": "Our Mission",
+        "description": "To provide world-class education that empowers students to become ethical leaders, critical thinkers, and agents of positive change in their communities and beyond. We are dedicated to fostering peace, understanding, and collaboration across cultures and nations."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be a leading international university recognized for academic excellence, innovative research, and commitment to peace education. We envision a world where education bridges divides, creates understanding, and builds sustainable futures for all."
+      },
+      "coreValues": {
+        "title": "Core Values",
+        "items": {
+          "excellence": "Excellence in teaching and learning",
+          "globalCitizenship": "Global citizenship and peace",
+          "diversity": "Diversity and inclusion",
+          "innovation": "Innovation and research",
+          "ethicalLeadership": "Ethical leadership"
+        }
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The principles that guide everything we do at EIPU",
+      "items": {
+        "academicExcellence": {
+          "title": "Academic Excellence",
+          "description": "Rigorous academic programs designed to challenge and inspire students to achieve their full potential."
+        },
+        "globalPerspective": {
+          "title": "Global Perspective",
+          "description": "Promoting international understanding and collaboration through diverse cultural experiences and global partnerships."
+        },
+        "inclusiveCommunity": {
+          "title": "Inclusive Community",
+          "description": "Building a welcoming environment where every student feels valued, respected, and empowered to succeed."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Encouraging creative thinking and cutting-edge research that addresses real-world challenges and drives progress."
+        },
+        "integrity": {
+          "title": "Integrity",
+          "description": "Upholding the highest standards of ethical conduct, honesty, and accountability in all our endeavors."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "Striving for continuous improvement and setting benchmarks in education, research, and community service."
+        }
+      }
+    },
+    "history": {
+      "title": "Our History",
+      "subtitle": "A journey of growth, excellence, and commitment to peace education",
+      "milestones": {
+        "2020": {
+          "title": "Foundation",
+          "description": "European International Peace University was established with a vision to create a world-class institution dedicated to peace education and global citizenship."
+        },
+        "2021": {
+          "title": "First Graduates",
+          "description": "We proudly celebrated our first graduating class, marking a significant milestone in our journey toward academic excellence."
+        },
+        "2022": {
+          "title": "International Recognition",
+          "description": "EIPU received accreditation and established partnerships with leading universities worldwide, expanding our global reach."
+        },
+        "2023": {
+          "title": "Expansion",
+          "description": "We expanded our programs and facilities, welcoming students from over 50 countries and strengthening our commitment to diversity."
+        }
+      }
+    }
+  },
+  "fees": {
+    "hero": {
+      "title": "Tuition Fees & Payment Plans",
+      "subtitle": "Affordable education with flexible payment options. Explore our competitive tuition fees, payment plans, and scholarship opportunities designed to make quality education accessible."
+    },
+    "priceTable": {
+      "title": "Program Fees",
+      "subtitle": "Transparent pricing for all our academic programs",
+      "mostPopular": "Most Popular",
+      "year": "/year",
+      "total": "Total",
+      "note": "* All fees are subject to change. Additional fees may apply for specific programs. Contact us for detailed information.",
+      "programs": {
+        "bachelors": {
+          "name": "Bachelor's Degree",
+          "duration": "4 Years",
+          "features": [
+            "Full-time study",
+            "Access to all facilities",
+            "Library access",
+            "Career counseling",
+            "Student support services"
+          ]
+        },
+        "masters": {
+          "name": "Master's Degree",
+          "duration": "2 Years",
+          "features": [
+            "Full-time study",
+            "Research opportunities",
+            "Thesis supervision",
+            "Library access",
+            "Career counseling",
+            "Alumni network"
+          ]
+        },
+        "doctoral": {
+          "name": "Doctoral Program",
+          "duration": "3-4 Years",
+          "features": [
+            "Full-time study",
+            "Research funding",
+            "Thesis supervision",
+            "Publication support",
+            "Conference attendance",
+            "Library access",
+            "Career counseling"
+          ]
+        },
+        "online": {
+          "name": "Online Programs",
+          "duration": "2-4 Years",
+          "features": [
+            "Flexible schedule",
+            "Online library access",
+            "Virtual lectures",
+            "Student support",
+            "Digital resources"
+          ]
+        }
+      }
+    },
+    "paymentPlans": {
+      "title": "Flexible Payment Plans",
+      "subtitle": "Choose a payment plan that works best for you. We offer various options to make education affordable.",
+      "recommended": "Recommended",
+      "off": "Off",
+      "customTerms": "Custom Terms",
+      "contact": "Contact for Payment Details",
+      "plans": {
+        "fullPayment": {
+          "name": "Full Payment",
+          "description": "Pay the entire tuition fee upfront and save",
+          "benefits": [
+            "10% discount on total fee",
+            "No monthly payments",
+            "Priority course registration",
+            "Simplified billing process"
+          ]
+        },
+        "semesterPayment": {
+          "name": "Semester Payment",
+          "description": "Pay per semester (2 payments per year)",
+          "benefits": [
+            "5% discount per semester",
+            "Manageable payments",
+            "Flexible scheduling",
+            "Standard course registration"
+          ]
+        },
+        "monthlyPayment": {
+          "name": "Monthly Payment",
+          "description": "Spread payments over 10 months",
+          "benefits": [
+            "No interest charges",
+            "10 equal monthly installments",
+            "Budget-friendly option",
+            "Automatic payment setup"
+          ]
+        },
+        "installmentPlan": {
+          "name": "Installment Plan",
+          "description": "Custom payment schedule based on your needs",
+          "benefits": [
+            "Flexible payment terms",
+            "Personalized schedule",
+            "Interest-free options",
+            "Financial counseling available"
+          ]
+        }
+      }
+    },
+    "scholarships": {
+      "title": "Scholarships & Financial Aid",
+      "subtitle": "We offer various scholarships to help make your education more affordable. Explore our scholarship opportunities below.",
+      "coverage": "Coverage",
+      "eligibility": "Eligibility",
+      "applicationDeadline": "Application Deadline",
+      "apply": "Apply for Scholarships",
+      "items": {
+        "academicExcellence": {
+          "name": "Academic Excellence",
+          "description": "For outstanding academic achievements and exceptional performance",
+          "eligibility": [
+            "GPA 3.5 or higher",
+            "Strong recommendation letters",
+            "Academic achievements",
+            "Interview required"
+          ]
+        },
+        "meritBased": {
+          "name": "Merit-Based",
+          "description": "Recognition for exceptional talent and dedication in various fields",
+          "eligibility": [
+            "Demonstrated merit",
+            "Portfolio or achievements",
+            "Recommendation letters",
+            "Application review"
+          ]
+        },
+        "needBased": {
+          "name": "Need-Based",
+          "description": "Financial assistance for students facing economic challenges",
+          "eligibility": [
+            "Financial need documentation",
+            "Household income assessment",
+            "Academic standing maintained",
+            "Application required"
+          ]
+        },
+        "internationalStudents": {
+          "name": "International Students",
+          "description": "Special support for international students joining our community",
+          "eligibility": [
+            "Non-resident student",
+            "Academic excellence",
+            "English proficiency",
+            "Cultural contribution"
+          ]
+        },
+        "researchFellowships": {
+          "name": "Research Fellowships",
+          "description": "For graduate students engaged in innovative research projects",
+          "eligibility": [
+            "Graduate student status",
+            "Research proposal",
+            "Faculty recommendation",
+            "Research potential"
+          ]
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about fees, payments, and financial aid",
+      "contact": "Still have questions? We're here to help!",
+      "contactLink": "Contact our Finance Office →",
+      "items": {
+        "q1": {
+          "question": "What is included in the tuition fee?",
+          "answer": "Tuition fees include all academic courses, access to university facilities (library, laboratories, computer labs), student support services, and basic student activities. Additional fees may apply for specific programs, materials, or optional services."
+        },
+        "q2": {
+          "question": "Can I pay my fees in installments?",
+          "answer": "Yes, we offer flexible payment plans including semester payments, monthly installments (10 months), and custom payment schedules. Interest-free options are available for all installment plans. Contact our finance office for more details."
+        },
+        "q3": {
+          "question": "Are there any additional fees?",
+          "answer": "Additional fees may include application fee, registration fee, student services fee, and specific program-related costs (materials, field trips, etc.). All fees are clearly outlined in your acceptance letter and student handbook."
+        },
+        "q4": {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept bank transfers, credit/debit cards, and online payment platforms. International students can also use wire transfers. Payment details and instructions will be provided upon enrollment."
+        },
+        "q5": {
+          "question": "Can I get a refund if I withdraw?",
+          "answer": "Refund policies vary by program and timing of withdrawal. Generally, refunds are available within the first few weeks of the semester, with amounts decreasing over time. Full refund policies are outlined in your enrollment agreement."
+        },
+        "q6": {
+          "question": "Are scholarships renewable?",
+          "answer": "Most scholarships are renewable annually based on maintaining academic performance (usually GPA 3.0 or higher), full-time enrollment, and good standing. Specific renewal requirements are outlined in your scholarship award letter."
+        },
+        "q7": {
+          "question": "Can I apply for multiple scholarships?",
+          "answer": "Yes, you can apply for multiple scholarships. However, total financial aid (including scholarships, grants, and other aid) cannot exceed the total cost of attendance. We'll work with you to maximize your financial aid package."
+        },
+        "q8": {
+          "question": "When are fees due?",
+          "answer": "Fee payment deadlines vary by payment plan. Full payment is due before the start of each semester. Semester payments are due at the beginning of each semester. Monthly installments begin in September and continue for 10 months. Specific dates are provided in your enrollment package."
+        },
+        "q9": {
+          "question": "Do you offer discounts for early payment?",
+          "answer": "Yes, we offer a 10% discount for full upfront payment and a 5% discount for semester payments. These discounts apply to tuition fees only and are available to all students. Contact us for more information about early payment discounts."
+        },
+        "q10": {
+          "question": "What happens if I can't pay on time?",
+          "answer": "If you're experiencing financial difficulties, please contact our finance office immediately. We offer payment plan modifications, emergency assistance, and financial counseling. Late fees may apply if arrangements aren't made in advance."
+        }
+      }
+    }
+  },
+  "programs": {
+    "hero": {
+      "title": "Academic Programs",
+      "subtitle": "Discover our comprehensive range of undergraduate, graduate, and professional programs designed to prepare you for success in your chosen field."
+    },
+    "grid": {
+      "title": "Our Programs",
+      "subtitle": "Explore our diverse range of academic and professional programs",
+      "searchPlaceholder": "Search programs...",
+      "found": "Found",
+      "programs": "program",
+      "programsPlural": "programs",
+      "noResults": "No programs found matching your criteria.",
+      "clearFilters": "Clear Filters",
+      "featuredProgram": "Featured Program",
+      "keyFeatures": "Key Features:",
+      "careerPaths": "Career Paths:",
+      "more": "more",
+      "learnMore": "Learn More",
+      "apply": "Apply"
+    },
+    "details": {
+      "backToPrograms": "Back to Programs",
+      "featured": "Featured",
+      "duration": "Duration",
+      "degreeType": "Degree Type",
+      "category": "Category",
+      "programFeatures": "Program Features",
+      "careerOpportunities": "Career Opportunities",
+      "readyToApply": "Ready to Apply?",
+      "applyDescription": "Start your application for the {title} program today.",
+      "applyNow": "Apply Now",
+      "contactAdmissions": "Contact Admissions",
+      "questions": "Questions? Contact our admissions office for personalized guidance."
+    },
+    "categories": {
+      "all": "All Programs",
+      "undergraduate": "Undergraduate",
+      "graduate": "Graduate",
+      "doctoral": "Doctoral",
+      "online": "Online",
+      "professional": "Professional"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "News & Updates",
+      "subtitle": "Stay informed about the latest news, events, announcements, and achievements at European International Peace University."
+    },
+    "grid": {
+      "featuredNews": "Featured News",
+      "featured": "Featured",
+      "allNews": "All News",
+      "searchPlaceholder": "Search news...",
+      "found": "Found",
+      "article": "article",
+      "articles": "articles",
+      "noResults": "No news articles found matching your criteria.",
+      "clearFilters": "Clear Filters",
+      "readMore": "Read More",
+      "min": "min"
+    },
+    "detail": {
+      "backToNews": "Back to News",
+      "backToAllNews": "Back to All News",
+      "featured": "Featured",
+      "minRead": "min read",
+      "share": "Share",
+      "tags": "Tags:",
+      "relatedNews": "Related News",
+      "linkCopied": "Link copied to clipboard!"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter and never miss important news, events, and updates from EIPU.",
+      "emailPlaceholder": "Enter your email address",
+      "subscribe": "Subscribe",
+      "thankYou": "Thank you for subscribing!",
+      "successMessage": "You'll receive our latest news and updates.",
+      "privacy": "We respect your privacy. Unsubscribe at any time."
+    },
+    "categories": {
+      "all": "All News",
+      "university": "University",
+      "events": "Events",
+      "announcements": "Announcements",
+      "academic": "Academic",
+      "student-life": "Student Life"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We're here to help! Get in touch with us through any of the following channels. Our team is ready to answer your questions and assist you with your educational journey."
+    },
+    "info": {
+      "title": "Get in Touch",
+      "subtitle": "Choose the best way to reach us. We're here to help!",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "admissions": "Admissions:",
+      "support": "Support:",
+      "officeHours": "Office Hours",
+      "hours": {
+        "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+        "saturday": "Saturday: 10:00 AM - 4:00 PM",
+        "sunday": "Sunday: Closed"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you as soon as possible.",
+      "success": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+      "name": "Full Name *",
+      "namePlaceholder": "John Doe",
+      "email": "Email *",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone (Optional)",
+      "phonePlaceholder": "+994 50 123 4567",
+      "subject": "Subject *",
+      "subjectPlaceholder": "General inquiry",
+      "message": "Message *",
+      "messagePlaceholder": "Your message here...",
+      "sending": "Sending...",
+      "sendMessage": "Send Message",
+      "privacy": "By submitting this form, you agree to our privacy policy.",
+      "viewFAQ": "View FAQ",
+      "validation": {
+        "nameMin": "Name must be at least 2 characters",
+        "emailInvalid": "Invalid email address",
+        "subjectMin": "Subject must be at least 3 characters",
+        "messageMin": "Message must be at least 10 characters"
+      }
+    },
+    "map": {
+      "title": "Find Us",
+      "subtitle": "Visit our campus or get directions using the map below.",
+      "campusAddress": "Campus Address",
+      "getDirections": "Get Directions"
+    },
+    "social": {
+      "followUs": "Follow Us",
+      "subtitle": "Stay connected with us on social media",
+      "haveQuestions": "Have Questions?",
+      "faqDescription": "Check out our Frequently Asked Questions section for quick answers to common inquiries.",
+      "viewFAQ": "View FAQ"
+    }
+  },
+  "footer": {
+    "description": "European International Peace University - An international university combining education, peace, and culture.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "university": "University",
+    "links": {
+      "about": "About",
+      "programs": "Programs",
+      "fees": "Fees",
+      "contact": "Contact",
+      "apply": "Apply"
+    },
+    "universityLinks": {
+      "academicPrograms": "Academic Programs",
+      "researchInnovation": "Research & Innovation",
+      "studentLife": "Student Life",
+      "admissions": "Admissions"
+    },
+    "copyright": "© {year} European International Peace University. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "apply": {
+    "hero": {
+      "title": "Apply to EIPU",
+      "subtitle": "Start your academic journey with us. Choose your degree program and begin your application today."
+    },
+    "applicantType": {
+      "title": "I am applying as",
+      "subtitle": "Please select your applicant type",
+      "student": "Student",
+      "studentDesc": "Apply as an individual student",
+      "agency": "Agency",
+      "agencyDesc": "Apply on behalf of an educational agency",
+      "continue": "Continue"
+    },
+    "degreeSelector": {
+      "title": "Select Your Degree Program",
+      "subtitle": "Choose the degree program you wish to apply for",
+      "loading": "Loading degrees...",
+      "error": "Failed to load degrees",
+      "retry": "Retry",
+      "noDegrees": "No degree programs available at the moment.",
+      "selected": "Selected Degree"
+    },
+    "facultySelector": {
+      "title": "Select Your Faculty",
+      "subtitle": "Choose your desired faculty from the available options",
+      "noFaculties": "No faculties available for this degree.",
+      "selected": "Selected Faculty"
+    },
+    "navigation": {
+      "back": "Back",
+      "continue": "Continue",
+      "submit": "Submit Application"
+    },
+    "studentForm": {
+      "title": "Student Application Form",
+      "personalInfo": "Personal Information",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "fatherName": "Father's Name",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "dateOfBirth": "Date of Birth",
+      "placeOfBirth": "Place of Birth (Country)",
+      "nationality": "Nationality",
+      "nativeLanguage": "Native Language",
+      "phone": "Phone Number",
+      "email": "Email",
+      "identification": "Identification",
+      "photoId": "Copy of Photo ID (image/pdf)",
+      "profilePhoto": "Profile Photo (image)",
+      "address": "Address",
+      "country": "Country",
+      "city": "City",
+      "addressLine": "Address Line",
+      "educationDocuments": "Education Documents",
+      "diploma": "High School Diploma (jpg/pdf)",
+      "transcript": "High School Transcript (jpg/pdf)",
+      "programChoice": "Program Choice",
+      "faculty": "Faculty",
+      "required": "Required field",
+      "invalidEmail": "Invalid email address",
+      "submitting": "Submitting...",
+      "submit": "Submit Application",
+      "submitSuccess": "Application submitted successfully!",
+      "submitError": "Failed to submit application. Please try again."
+    },
+    "agencyForm": {
+      "title": "Agency Application Form",
+      "agencyInfo": "Agency Information",
+      "agencyName": "Agency Name",
+      "country": "Country",
+      "city": "City",
+      "address": "Address",
+      "website": "Website (optional)",
+      "contactPerson": "Contact Person",
+      "contactName": "Contact Person Full Name",
+      "contactPhone": "Contact Person Phone",
+      "contactEmail": "Contact Person Email",
+      "agencyIdentification": "Agency Identification",
+      "businessLicense": "Business License (pdf/image)",
+      "companyLogo": "Company Logo (optional)",
+      "programChoice": "Program Choice",
+      "faculty": "Faculty",
+      "required": "Required field",
+      "invalidEmail": "Invalid email address",
+      "submitting": "Submitting...",
+      "submit": "Submit Application",
+      "submitSuccess": "Application submitted successfully!",
+      "submitError": "Failed to submit application. Please try again."
+    }
+  }
+}
