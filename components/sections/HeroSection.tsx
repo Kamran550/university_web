@@ -36,6 +36,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-lg md:text-xl text-white/90 mb-8"
+          
         >
           {t("subtitle")}
         </motion.p>

@@ -17,6 +17,7 @@ export {
 // API Services
 export * from "./degrees";
 export * from "./faculties";
+export * from "./programs";
 
 // Configuration
 export { API_CONFIG, getApiUrl } from "../config/api.config";

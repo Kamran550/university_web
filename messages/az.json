@@ -575,6 +575,10 @@
     },
     "studentForm": {
       "title": "Tələbə Müraciət Forması",
+      "programSelection": "Proqram Seçimi",
+      "program": "Proqram",
+      "loadingPrograms": "Proqramlar yüklənir...",
+      "selectProgram": "Proqram seçin",
       "personalInfo": "Şəxsi Məlumatlar",
       "firstName": "Ad",
       "lastName": "Soyad",

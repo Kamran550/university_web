@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -23,8 +23,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { ProgramService } from "@/lib/services/program.service";
+import { Program } from "@/lib/types/program";
 
 interface StudentApplicationFormProps {
   facultyId: number;
@@ -38,13 +40,15 @@ export default function StudentApplicationForm({
   facultyId,
   facultyName,
   degreeId,
-  degreeName,
   onSubmitSuccess,
 }: StudentApplicationFormProps) {
   const t = useTranslations("apply.studentForm");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [programs, setPrograms] = useState<Program[]>([]);
+  const [loadingPrograms, setLoadingPrograms] = useState(true);
 
   const formSchema = z.object({
+    programId: z.string().min(1, t("required")),
     firstName: z.string().min(1, t("required")),
     lastName: z.string().min(1, t("required")),
     fatherName: z.string().min(1, t("required")),
@@ -69,6 +73,7 @@ export default function StudentApplicationForm({
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      programId: "",
       firstName: "",
       lastName: "",
       fatherName: "",
@@ -85,13 +90,35 @@ export default function StudentApplicationForm({
     },
   });
 
+  // Fetch programs when component mounts
+  useEffect(() => {
+    const fetchPrograms = async () => {
+      try {
+        setLoadingPrograms(true);
+        const data = await ProgramService.getByDegreeAndFaculty(
+          degreeId,
+          facultyId
+        );
+        setPrograms(data);
+      } catch (error) {
+        console.error("Failed to fetch programs:", error);
+        // Handle error - you might want to show an error message to user
+      } finally {
+        setLoadingPrograms(false);
+      }
+    };
+
+    if (degreeId && facultyId) {
+      fetchPrograms();
+    }
+  }, [degreeId, facultyId]);
+
   async function onSubmit(data: FormValues) {
     try {
       const formData = new FormData();
 
       // Add form data with snake_case to match backend
-      formData.append("degree_id", degreeId.toString());
-      formData.append("faculty_id", facultyId.toString());
+      formData.append("program_id", data.programId);
       formData.append("first_name", data.firstName);
       formData.append("last_name", data.lastName);
       formData.append("father_name", data.fatherName);
@@ -106,13 +133,13 @@ export default function StudentApplicationForm({
       formData.append("city", data.city);
       formData.append("address_line", data.addressLine);
 
-      // Add files with _path suffix as backend expects
-      if (data.photoId?.[0]) formData.append("photo_id_path", data.photoId[0]);
+      // Add files
+      if (data.photoId?.[0]) formData.append("photo_id", data.photoId[0]);
       if (data.profilePhoto?.[0])
-        formData.append("profile_photo_path", data.profilePhoto[0]);
-      if (data.diploma?.[0]) formData.append("diploma_path", data.diploma[0]);
+        formData.append("profile_photo", data.profilePhoto[0]);
+      if (data.diploma?.[0]) formData.append("diploma", data.diploma[0]);
       if (data.transcript?.[0])
-        formData.append("transcript_path", data.transcript[0]);
+        formData.append("transcript", data.transcript[0]);
 
       // Add locale (get from browser or Next.js)
       const locale = document.documentElement.lang || "en";
@@ -187,6 +214,58 @@ export default function StudentApplicationForm({
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="space-y-8"
               >
+                {/* Program Selection */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">
+                    {t("programSelection")}
+                  </h3>
+                  <div className="grid sm:grid-cols-1 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="programId"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{t("program")} *</FormLabel>
+                          {loadingPrograms ? (
+                            <div className="flex items-center gap-2 p-4 border rounded-md">
+                              <Loader2 className="w-4 h-4 animate-spin text-primary" />
+                              <span className="text-sm text-muted-foreground">
+                                {t("loadingPrograms")}
+                              </span>
+                            </div>
+                          ) : (
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue={field.value}
+                            >
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue
+                                    placeholder={t("selectProgram")}
+                                  />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {programs.map((program) => (
+                                  <SelectItem
+                                    key={program.id}
+                                    value={program.id.toString()}
+                                  >
+                                    {program.name}
+                                    {program.price_per_year &&
+                                      ` - $${program.price_per_year}/year`}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          )}
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                </div>
+
                 {/* Personal Information */}
                 <div>
                   <h3 className="text-xl font-semibold mb-4">

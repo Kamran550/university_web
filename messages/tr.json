@@ -575,6 +575,10 @@
     },
     "studentForm": {
       "title": "Öğrenci Başvuru Formu",
+      "programSelection": "Program Seçimi",
+      "program": "Program",
+      "loadingPrograms": "Programlar yükleniyor...",
+      "selectProgram": "Bir program seçin",
       "personalInfo": "Kişisel Bilgiler",
       "firstName": "Ad",
       "lastName": "Soyad",

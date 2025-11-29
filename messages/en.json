@@ -575,6 +575,10 @@
     },
     "studentForm": {
       "title": "Student Application Form",
+      "programSelection": "Program Selection",
+      "program": "Program",
+      "loadingPrograms": "Loading programs...",
+      "selectProgram": "Select a program",
       "personalInfo": "Personal Information",
       "firstName": "First Name",
       "lastName": "Last Name",

@@ -9,6 +9,7 @@ export const API_CONFIG = {
   endpoints: {
     degrees: "/degrees",
     faculties: "/faculties",
+    programs: "/programs/filter",
   },
 } as const;
 

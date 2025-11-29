@@ -82,11 +82,11 @@ export default function AgencyApplicationForm({
       formData.append("contact_phone", data.contactPhone);
       formData.append("contact_email", data.contactEmail);
 
-      // Add files with _path suffix as backend expects
+      // Add files
       if (data.businessLicense?.[0])
-        formData.append("business_license_path", data.businessLicense[0]);
+        formData.append("business_license", data.businessLicense[0]);
       if (data.companyLogo?.[0])
-        formData.append("company_logo_path", data.companyLogo[0]);
+        formData.append("company_logo", data.companyLogo[0]);
 
       // Add locale (get from browser or Next.js)
       const locale = document.documentElement.lang || "en";
