@@ -15,7 +15,7 @@ export default function MissionVision() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -33,7 +33,7 @@ export default function MissionVision() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: false, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <Card className="h-full shadow-lg hover:shadow-xl transition-shadow border-2 border-blue-100 dark:border-blue-900">
               <CardHeader>
@@ -57,7 +57,7 @@ export default function MissionVision() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: false, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <Card className="h-full shadow-lg hover:shadow-xl transition-shadow border-2 border-indigo-100 dark:border-indigo-900">
               <CardHeader>
@@ -81,7 +81,7 @@ export default function MissionVision() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: false, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <Card className="h-full shadow-lg hover:shadow-xl transition-shadow border-2 border-purple-100 dark:border-purple-900">
               <CardHeader>

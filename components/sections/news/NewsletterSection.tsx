@@ -33,7 +33,7 @@ export default function NewsletterSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           <Card className="shadow-xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20">
             <CardHeader className="text-center">
@@ -50,6 +50,7 @@ export default function NewsletterSection() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, margin: "-100px" }}
                   className="text-center p-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg"
                 >
                   <CheckCircle className="w-12 h-12 text-green-600 dark:text-green-400 mx-auto mb-3" />

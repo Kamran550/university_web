@@ -33,14 +33,14 @@ export default function ContactInfo() {
   const t = useTranslations("contact.info");
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-black">
+    <section className="py-20 bg-linear-to-b from-slate-50 to-white dark:from-slate-900 dark:to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -58,7 +58,7 @@ export default function ContactInfo() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: false, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <Card className="h-full shadow-lg hover:shadow-xl transition-shadow border-2 hover:border-primary/50">
               <CardContent className="pt-6">
@@ -105,7 +105,7 @@ export default function ContactInfo() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: false, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <Card className="h-full shadow-lg hover:shadow-xl transition-shadow border-2 hover:border-primary/50">
               <CardContent className="pt-6">
@@ -156,7 +156,7 @@ export default function ContactInfo() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: false, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px" }}
             className="md:col-span-2 lg:col-span-1"
           >
             <Card className="h-full shadow-lg hover:shadow-xl transition-shadow border-2 hover:border-primary/50">
@@ -187,7 +187,7 @@ export default function ContactInfo() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="mt-12 text-center"
         >
           <Card className="max-w-2xl mx-auto">

@@ -24,7 +24,7 @@ export default function ContactMap() {
       initial={{ opacity: 0, x: 20 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: false, margin: "-50px" }}
+      viewport={{ once: true, margin: "-50px" }}
       className="h-full"
     >
       <Card className="shadow-lg h-full flex flex-col">

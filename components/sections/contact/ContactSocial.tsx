@@ -57,7 +57,7 @@ export default function ContactSocial() {
   const t = useTranslations("contact.social");
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-black">
+    <section className="py-20 bg-linear-to-b from-white to-slate-50 dark:from-slate-950 dark:to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {/* Social Media */}
@@ -65,7 +65,7 @@ export default function ContactSocial() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: false, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <Card className="shadow-lg">
               <CardContent className="pt-6">
@@ -89,7 +89,7 @@ export default function ContactSocial() {
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: index * 0.1 }}
-                        viewport={{ once: false, margin: "-50px" }}
+                        viewport={{ once: true, margin: "-50px" }}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         className={`w-14 h-14 rounded-full ${social.bgColor} flex items-center justify-center ${social.color} hover:shadow-lg transition-shadow`}
@@ -109,7 +109,7 @@ export default function ContactSocial() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: false, margin: "-50px" }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <Card className="shadow-lg h-full">
               <CardContent className="pt-6 flex flex-col items-center justify-center text-center h-full min-h-[200px]">

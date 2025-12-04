@@ -27,7 +27,7 @@ export default function ApplyCTA() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center"
         >
           {/* Headline */}
@@ -35,7 +35,7 @@ export default function ApplyCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
           >
             {t("title")}
@@ -46,7 +46,7 @@ export default function ApplyCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
           >
             {t("description")}
@@ -57,7 +57,7 @@ export default function ApplyCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             className="flex flex-wrap justify-center gap-4 md:gap-6 mb-10"
           >
             {applyInfo.benefits.map((benefit, index) => (
@@ -66,7 +66,7 @@ export default function ApplyCTA() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                viewport={{ once: false, margin: "-100px" }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20"
               >
                 <Check className="w-5 h-5 text-green-300 shrink-0" />
@@ -82,7 +82,7 @@ export default function ApplyCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             className="mb-8"
           >
             <p className="text-blue-200 text-sm md:text-base font-medium">
@@ -95,7 +95,7 @@ export default function ApplyCTA() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             className="flex justify-center gap-4 flex-wrap"
           >
             <Button

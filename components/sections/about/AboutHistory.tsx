@@ -19,7 +19,7 @@ export default function AboutHistory() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -47,7 +47,7 @@ export default function AboutHistory() {
                   initial={{ opacity: 0, x: isEven ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: false, margin: "-50px" }}
+                  viewport={{ once: true, margin: "-50px" }}
                   className={`flex flex-col md:flex-row items-center ${
                     isEven ? "md:flex-row-reverse" : ""
                   } gap-6 md:gap-12 relative`}
@@ -92,7 +92,7 @@ export default function AboutHistory() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="mt-16 rounded-2xl overflow-hidden shadow-2xl"
         >
           <Image

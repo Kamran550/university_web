@@ -7,7 +7,7 @@ export default function FeesHero() {
   const t = useTranslations("fees.hero");
 
   return (
-    <section className="relative w-full min-h-[50vh] flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 pt-24 md:pt-28 lg:pt-32">
+    <section className="relative w-full min-h-[50vh] flex items-center justify-center bg-linear-to-br from-blue-900 via-blue-800 to-indigo-900 pt-24 md:pt-28 lg:pt-32">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/30"></div>
 
@@ -17,6 +17,7 @@ export default function FeesHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">

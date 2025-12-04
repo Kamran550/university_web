@@ -44,14 +44,14 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900">
+    <section className="py-20 bg-linear-to-b from-white to-gray-50 dark:from-black dark:to-gray-900">
       <div className="max-w-5xl mx-auto px-6">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-14"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -74,6 +74,7 @@ export default function TestimonialsSection() {
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
                 className="absolute inset-0 flex items-center justify-center"
+                viewport={{ once: true, margin: "-100px" }}
               >
                 <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto text-center">
                   {/* Avatar */}
@@ -99,6 +100,7 @@ export default function TestimonialsSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
                     className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 italic leading-relaxed"
+                    viewport={{ once: true, margin: "-100px" }}
                   >
                     &ldquo;{testimonials[currentIndex].text}&rdquo;
                   </motion.p>
@@ -108,6 +110,7 @@ export default function TestimonialsSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
+                    viewport={{ once: true, margin: "-100px" }}
                   >
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {testimonials[currentIndex].name}

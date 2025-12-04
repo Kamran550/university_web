@@ -16,7 +16,8 @@ export default function AboutPreview() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
+
         >
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <Image
@@ -34,7 +35,7 @@ export default function AboutPreview() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
 

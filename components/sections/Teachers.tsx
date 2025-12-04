@@ -17,7 +17,7 @@ export function TeachersSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-14"
         >
           <h2 className="text-4xl font-bold tracking-tight">{t("title")}</h2>
@@ -37,7 +37,7 @@ export function TeachersSection() {
                 type: "spring",
                 stiffness: 100,
               }}
-              viewport={{ once: false, margin: "-50px" }}
+              viewport={{ once: true, margin: "-50px" }}
               whileHover={{ scale: 1.05 }}
             >
               <Card className="shadow-md hover:shadow-xl transition-all rounded-xl overflow-hidden p-0 gap-0 flex flex-col">

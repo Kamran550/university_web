@@ -66,7 +66,7 @@ export default function ContactForm() {
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: false, margin: "-50px" }}
+      viewport={{ once: true, margin: "-50px" }}
     >
       <Card className="shadow-lg">
         <CardHeader>
@@ -79,6 +79,7 @@ export default function ContactForm() {
           {isSubmitted && (
             <motion.div
               initial={{ opacity: 0, y: -10 }}
+              viewport={{ once: true, margin: "-100px" }}
               animate={{ opacity: 1, y: 0 }}
               className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-3"
             >

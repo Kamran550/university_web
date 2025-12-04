@@ -26,6 +26,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight"
+          viewport={{ once: true, margin: "-100px" }}
         >
           {t("title")}
         </motion.h1>
@@ -36,7 +37,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-lg md:text-xl text-white/90 mb-8"
-          
+          viewport={{ once: true, margin: "-100px" }}
         >
           {t("subtitle")}
         </motion.p>
@@ -47,6 +48,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
           className="flex justify-center gap-4"
+          viewport={{ once: true, margin: "-100px" }}
         >
           <Button asChild size="lg" className="text-sm md:text-base">
             <Link href="/apply">{t("primaryButton")}</Link>

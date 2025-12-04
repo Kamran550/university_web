@@ -70,7 +70,7 @@ export default function StatisticsSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -96,7 +96,7 @@ export default function StatisticsSection() {
                 type: "spring",
                 stiffness: 100,
               }}
-              viewport={{ once: false, margin: "-50px" }}
+              viewport={{ once: true, margin: "-50px" }}
               className="text-center p-6 rounded-2xl bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all border border-gray-100 dark:border-slate-700"
             >
               <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">

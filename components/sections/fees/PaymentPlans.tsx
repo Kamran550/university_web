@@ -22,14 +22,14 @@ export default function PaymentPlans() {
   const locale = useLocale();
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-black">
+    <section className="py-20 bg-linear-to-b from-slate-50 to-white dark:from-slate-900 dark:to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -58,7 +58,7 @@ export default function PaymentPlans() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: false, margin: "-50px" }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="relative"
               >
                 <Card
@@ -118,7 +118,7 @@ export default function PaymentPlans() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="mt-12 text-center"
         >
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">

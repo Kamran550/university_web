@@ -72,7 +72,7 @@ export default function Scholarships() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -102,7 +102,7 @@ export default function Scholarships() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: false, margin: "-50px" }}
+                viewport={{ once: true, margin: "-50px" }}
               >
                 <Card className="h-full flex flex-col shadow-lg hover:shadow-xl transition-all border-2">
                   <CardHeader>
@@ -171,7 +171,7 @@ export default function Scholarships() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="mt-12 text-center"
         >
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">

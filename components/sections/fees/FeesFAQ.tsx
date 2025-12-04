@@ -29,14 +29,14 @@ export default function FeesFAQ() {
   const locale = useLocale();
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-black">
+    <section className="py-20 bg-linear-to-b from-slate-50 to-white dark:from-slate-900 dark:to-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -52,7 +52,7 @@ export default function FeesFAQ() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
         >
           <Accordion type="single" collapsible className="w-full space-y-4">
             {faqKeys.map((key, index) => (
@@ -77,7 +77,7 @@ export default function FeesFAQ() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="mt-12 text-center"
         >
           <p className="text-muted-foreground mb-4">{t("contact")}</p>

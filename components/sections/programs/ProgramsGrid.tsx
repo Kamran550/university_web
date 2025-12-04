@@ -38,7 +38,7 @@ export default function ProgramsGrid() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -54,7 +54,7 @@ export default function ProgramsGrid() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
@@ -98,6 +98,7 @@ export default function ProgramsGrid() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="mb-6 text-sm text-muted-foreground"
           >
             {t("found")} {filteredPrograms.length}{" "}
@@ -118,6 +119,7 @@ export default function ProgramsGrid() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="text-center py-16"
           >
             <p className="text-lg text-muted-foreground">{t("noResults")}</p>
@@ -157,7 +159,7 @@ function ProgramCard({ program, index }: { program: Program; index: number }) {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      viewport={{ once: false, margin: "-50px" }}
+      viewport={{ once: true, margin: "-50px" }}
       className="group"
     >
       <Card
