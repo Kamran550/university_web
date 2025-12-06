@@ -126,8 +126,14 @@ export const metadata: Metadata = {
 
   // Icons
   icons: {
-    icon: "/favicon.ico",
-    apple: "/images/EIPU-logo.png",
+    icon: [
+      { url: "/images/EIPU-logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/EIPU-logo.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/images/EIPU-logo.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/images/EIPU-logo.png",
   },
 };
 
