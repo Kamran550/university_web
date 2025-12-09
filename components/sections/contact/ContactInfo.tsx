@@ -7,8 +7,8 @@ import { useTranslations } from "next-intl";
 
 const contactInfo = {
   phone: {
-    primary: "+994 12 555 1234",
-    secondary: "+994 50 123 4567",
+    primary: "+48 12 345 6789",
+    secondary: "+48 12 345 6789",
     hours: "Mon-Fri: 9:00 AM - 6:00 PM",
   },
   email: {
@@ -17,10 +17,10 @@ const contactInfo = {
     support: "support@eipu.edu",
   },
   address: {
-    street: "123 University Avenue",
-    city: "Baku, Azerbaijan",
-    zip: "AZ 1000",
-    country: "Azerbaijan",
+    street: "ul. Krakowska 23",
+    city: "Warsaw, Poland",
+    zip: "00-000",
+    country: "Poland",
   },
   hours: {
     weekdays: "Monday - Friday: 9:00 AM - 6:00 PM",

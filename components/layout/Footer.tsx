@@ -7,9 +7,9 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const contactInfo = {
-  phone: "+994 12 555 1234",
+  phone: "+48 12 345 6789",
   email: "info@eipu.edu",
-  address: "Baku, Azerbaijan",
+  address: "ul. Krakowska 23, 00-000 Warsaw, Poland",
 };
 
 export function Footer() {

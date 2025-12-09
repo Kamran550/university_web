@@ -15,12 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   // Əsas məlumatlar
   title: {
-    default:
-      "EIPU - European International Peace University | Avropa Beynəlxalq Sülh Universiteti",
+    default: "EIPU - European International Peace University | Study in Poland",
     template: "%s | EIPU - European International Peace University",
   },
   description:
-    "EIPU - European International Peace University (Avropa Beynəlxalq Sülh Universiteti). Polşada beynəlxalq təhsil, bakalavr, magistr və doktorantura proqramları. Sülh və qlobal anlaşma vasitəsilə təhsil.",
+    "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
 
   // Açar sözlər
   keywords: [
@@ -89,10 +88,9 @@ export const metadata: Metadata = {
     alternateLocale: ["az_AZ", "tr_TR"],
     url: "https://eipu.edu.pl",
     siteName: "EIPU - European International Peace University",
-    title:
-      "EIPU - European International Peace University | Avropa Beynəlxalq Sülh Universiteti",
+    title: "EIPU - European International Peace University | Study in Poland",
     description:
-      "EIPU - European International Peace University. Polşada beynəlxalq təhsil, bakalavr, magistr və doktorantura proqramları. Sülh və qlobal anlaşma vasitəsilə keyfiyyətli təhsil.",
+      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
     images: [
       {
         url: "/images/EIPU-logo-tam.jpg",
@@ -108,7 +106,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "EIPU - European International Peace University",
     description:
-      "EIPU - Polşada beynəlxalq təhsil. Bakalavr, magistr və doktorantura proqramları.",
+      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs.",
     images: ["/images/EIPU-logo-tam.jpg"],
     creator: "@eipu_edu",
     site: "@eipu_edu",
@@ -116,7 +114,7 @@ export const metadata: Metadata = {
 
   // Verification (Google Search Console, Bing, etc.)
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE", // Google Search Console-dan alınacaq
+    google: "KLaSW1pDoMKO_L3uMzk9eMceecJ5d0d7Pvke5ldZkNs", // Google Search Console-dan alınacaq
     // yandex: "YOUR_YANDEX_CODE",
     // bing: "YOUR_BING_CODE",
   },
