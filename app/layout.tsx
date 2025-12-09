@@ -122,9 +122,10 @@ export const metadata: Metadata = {
   // Category
   category: "education",
 
-  // Icons
+  // Icons / Favicon
   icons: {
     icon: [
+      { url: "/images/EIPU-logo.png", sizes: "any", type: "image/png" },
       { url: "/images/EIPU-logo.png", sizes: "32x32", type: "image/png" },
       { url: "/images/EIPU-logo.png", sizes: "16x16", type: "image/png" },
     ],

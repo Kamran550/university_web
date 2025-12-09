@@ -9,7 +9,7 @@ import { SeoJsonLd } from "@/components/seo/JsonLd";
 import { TopLoader } from "@/components/ui/TopLoader";
 import type { Metadata } from "next";
 
-// Hər dil üçün SEO məlumatları
+// Hər dil üçün SEO məlumatları - Title həmişə ingilis dilindədir
 const seoData: Record<
   string,
   { title: string; description: string; keywords: string[] }
@@ -32,7 +32,7 @@ const seoData: Record<
     ],
   },
   az: {
-    title: "EIPU - Avropa Beynəlxalq Sülh Universiteti | Polşada Təhsil",
+    title: "EIPU - European International Peace University | Study in Poland",
     description:
       "EIPU - Avropa Beynəlxalq Sülh Universiteti. Polşada beynəlxalq təhsil, bakalavr, magistr və doktorantura proqramları. Sülh və qlobal anlaşma vasitəsilə keyfiyyətli təhsil.",
     keywords: [
@@ -49,7 +49,7 @@ const seoData: Record<
     ],
   },
   tr: {
-    title: "EIPU - Avrupa Uluslararası Barış Üniversitesi | Polonya'da Eğitim",
+    title: "EIPU - European International Peace University | Study in Poland",
     description:
       "EIPU - Avrupa Uluslararası Barış Üniversitesi. Polonya'da uluslararası eğitim, lisans, yüksek lisans ve doktora programları. Barış ve küresel anlayış yoluyla kaliteli eğitim.",
     keywords: [
@@ -79,6 +79,17 @@ export async function generateMetadata({
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    icons: {
+      icon: [
+        { url: "/images/EIPU-logo.png", sizes: "any", type: "image/png" },
+        { url: "/images/EIPU-logo.png", sizes: "32x32", type: "image/png" },
+        { url: "/images/EIPU-logo.png", sizes: "16x16", type: "image/png" },
+      ],
+      apple: [
+        { url: "/images/EIPU-logo.png", sizes: "180x180", type: "image/png" },
+      ],
+      shortcut: "/images/EIPU-logo.png",
+    },
     alternates: {
       canonical: `https://eipu.edu.pl/${locale}`,
       languages: {
