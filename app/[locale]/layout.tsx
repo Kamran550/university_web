@@ -34,7 +34,7 @@ const seoData: Record<
   az: {
     title: "EIPU - European International Peace University | Study in Poland",
     description:
-      "EIPU - Avropa Beynəlxalq Sülh Universiteti. Polşada beynəlxalq təhsil, bakalavr, magistr və doktorantura proqramları. Sülh və qlobal anlaşma vasitəsilə keyfiyyətli təhsil.",
+      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
     keywords: [
       "EIPU",
       "Avropa Beynəlxalq Sülh Universiteti",
@@ -51,7 +51,7 @@ const seoData: Record<
   tr: {
     title: "EIPU - European International Peace University | Study in Poland",
     description:
-      "EIPU - Avrupa Uluslararası Barış Üniversitesi. Polonya'da uluslararası eğitim, lisans, yüksek lisans ve doktora programları. Barış ve küresel anlayış yoluyla kaliteli eğitim.",
+      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
     keywords: [
       "EIPU",
       "Avrupa Uluslararası Barış Üniversitesi",
