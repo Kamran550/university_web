@@ -7,7 +7,13 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const contactInfo = {
-  phone: "+48 12 345 6789",
+  phones: {
+    poland: "+48 12 345 6789",
+    azerbaijan: "+994 12 345 6789",
+    germany: "+49 30 12345678",
+    turkey: "+90 212 123 4567",
+    global: "+1 555 123 4567",
+  },
   email: "info@eipu.edu",
   address: "ul. Krakowska 23, 00-000 Warsaw, Poland",
 };
@@ -16,6 +22,7 @@ export function Footer() {
   const t = useTranslations("footer");
   const tLinks = useTranslations("footer.links");
   const tUniversityLinks = useTranslations("footer.universityLinks");
+  const tPhoneNumbers = useTranslations("footer.phoneNumbers");
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
@@ -81,15 +88,80 @@ export function Footer() {
               {t("contact")}
             </h3>
             <ul className="space-y-4">
+              {/* Phone Numbers */}
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <div>
-                  <a
-                    href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
-                    className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
-                  >
-                    {contactInfo.phone}
-                  </a>
+                <div className="space-y-2 flex-1">
+                  <div>
+                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
+                      {tPhoneNumbers("poland")}:
+                    </span>
+                    <a
+                      href={`tel:${contactInfo.phones.poland.replace(
+                        /\s/g,
+                        ""
+                      )}`}
+                      className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
+                    >
+                      {contactInfo.phones.poland}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
+                      {tPhoneNumbers("azerbaijan")}:
+                    </span>
+                    <a
+                      href={`tel:${contactInfo.phones.azerbaijan.replace(
+                        /\s/g,
+                        ""
+                      )}`}
+                      className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
+                    >
+                      {contactInfo.phones.azerbaijan}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
+                      {tPhoneNumbers("germany")}:
+                    </span>
+                    <a
+                      href={`tel:${contactInfo.phones.germany.replace(
+                        /\s/g,
+                        ""
+                      )}`}
+                      className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
+                    >
+                      {contactInfo.phones.germany}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
+                      {tPhoneNumbers("turkey")}:
+                    </span>
+                    <a
+                      href={`tel:${contactInfo.phones.turkey.replace(
+                        /\s/g,
+                        ""
+                      )}`}
+                      className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
+                    >
+                      {contactInfo.phones.turkey}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
+                      {tPhoneNumbers("global")}:
+                    </span>
+                    <a
+                      href={`tel:${contactInfo.phones.global.replace(
+                        /\s/g,
+                        ""
+                      )}`}
+                      className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
+                    >
+                      {contactInfo.phones.global}
+                    </a>
+                  </div>
                 </div>
               </li>
               <li className="flex items-start space-x-3">

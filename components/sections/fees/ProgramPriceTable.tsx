@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, X } from "lucide-react";
+import { Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const programKeys = ["bachelors", "masters", "doctoral", "online"] as const;
 const programConfig = [
-  { annualFee: 3500, totalFee: 14000, popular: false },
-  { annualFee: 4500, totalFee: 9000, popular: true },
-  { annualFee: 5500, totalFee: 16500, popular: false },
+  { annualFee: 4000, totalFee: 14000, popular: false },
+  { annualFee: 4000, totalFee: 14000, popular: true },
+  { annualFee: 4000, totalFee: 14000, popular: false },
   { annualFee: 2800, totalFee: 8400, popular: false },
 ] as const;
 
@@ -75,13 +75,13 @@ export default function ProgramPriceTable() {
                     </p>
                     <div className="mt-4">
                       <div className="text-3xl font-bold text-primary">
-                        ${program.annualFee.toLocaleString()}
+                        €{program.annualFee.toLocaleString()}
                         <span className="text-sm text-muted-foreground font-normal">
                           {t("year")}
                         </span>
                       </div>
                       <p className="text-sm text-muted-foreground mt-1">
-                        {t("total")}: ${program.totalFee.toLocaleString()}
+                        {t("total")}: €{program.totalFee.toLocaleString()}
                       </p>
                     </div>
                   </CardHeader>

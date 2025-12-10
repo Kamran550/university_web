@@ -1,8 +1,8 @@
 import HeroSection from "@/components/sections/HeroSection";
 import AboutPreview from "@/components/sections/AboutPreview";
-import { TeachersSection } from "@/components/sections/Teachers";
+// import { TeachersSection } from "@/components/sections/Teachers";
 import StatisticsSection from "@/components/sections/Statistics";
-import TestimonialsSection from "@/components/sections/Testimonials";
+// import TestimonialsSection from "@/components/sections/Testimonials";
 import ApplyCTA from "@/components/sections/ApplyCTA";
 
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
       <HeroSection />
       <AboutPreview />
       <StatisticsSection />
-      <TeachersSection />
-      <TestimonialsSection />
+      {/* <TeachersSection /> */}
+      {/* <TestimonialsSection /> */}
       <ApplyCTA />
     </main>
   );

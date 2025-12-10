@@ -522,6 +522,13 @@
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "university": "University",
+    "phoneNumbers": {
+      "poland": "Poland",
+      "azerbaijan": "Azerbaijan",
+      "germany": "Germany",
+      "turkey": "Turkey",
+      "global": "Global"
+    },
     "links": {
       "about": "About",
       "programs": "Programs",

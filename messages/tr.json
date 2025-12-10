@@ -522,6 +522,13 @@
     "quickLinks": "Hızlı Bağlantılar",
     "contact": "İletişim",
     "university": "Üniversite",
+    "phoneNumbers": {
+      "poland": "Polonya",
+      "azerbaijan": "Azerbaycan",
+      "germany": "Almanya",
+      "turkey": "Türkiye",
+      "global": "Küresel"
+    },
     "links": {
       "about": "Hakkımızda",
       "programs": "Programlar",
