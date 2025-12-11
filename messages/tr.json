@@ -63,9 +63,9 @@
     "learnMore": "Daha Fazla Bilgi"
   },
   "language": {
-    "az": "Azərbaycan",
     "en": "English",
-    "tr": "Türkçe"
+    "tr": "Türkçe",
+    "ru": "Русский"
   },
   "about": {
     "hero": {
@@ -573,7 +573,14 @@
       "title": "Fakültenizi Seçin",
       "subtitle": "Mevcut seçeneklerden istediğiniz fakülteyi seçin",
       "noFaculties": "Bu derece için fakülte bulunmamaktadır.",
-      "selected": "Seçilen Fakülte"
+      "selected": "Seçilen Fakülte",
+      "languageSelection": {
+        "title": "Öğretim Dilini Seçin",
+        "subtitle": "Programınız için öğretim dilini seçin",
+        "english": "İngilizce",
+        "turkish": "Türkçe",
+        "selected": "Seçilen Dil"
+      }
     },
     "navigation": {
       "back": "Geri",

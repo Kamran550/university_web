@@ -20,9 +20,10 @@ export class ProgramService {
    */
   static async getByDegreeAndFaculty(
     degreeId: number,
-    facultyId: number
+    facultyId: number,
+    lang: "EN" | "TR" = "EN"
   ): Promise<Program[]> {
-    return getProgramsByDegreeAndFaculty(degreeId, facultyId);
+    return getProgramsByDegreeAndFaculty(degreeId, facultyId, lang);
   }
 
   /**
@@ -38,9 +39,10 @@ export class ProgramService {
    */
   static async getAsOptions(
     degreeId: number,
-    facultyId: number
+    facultyId: number,
+    lang: "EN" | "TR" = "EN"
   ): Promise<Array<{ value: number; label: string }>> {
-    const programs = await this.getByDegreeAndFaculty(degreeId, facultyId);
+    const programs = await this.getByDegreeAndFaculty(degreeId, facultyId, lang);
     return programs.map((program) => ({
       value: program.id,
       label: program.name,

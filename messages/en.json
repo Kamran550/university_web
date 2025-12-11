@@ -63,9 +63,9 @@
     "learnMore": "Learn More"
   },
   "language": {
-    "az": "Azərbaycan",
     "en": "English",
-    "tr": "Türkçe"
+    "tr": "Türkçe",
+    "ru": "Русский"
   },
   "about": {
     "hero": {
@@ -573,7 +573,14 @@
       "title": "Select Your Faculty",
       "subtitle": "Choose your desired faculty from the available options",
       "noFaculties": "No faculties available for this degree.",
-      "selected": "Selected Faculty"
+      "selected": "Selected Faculty",
+      "languageSelection": {
+        "title": "Select Teaching Language",
+        "subtitle": "Choose the language of instruction for your program",
+        "english": "English",
+        "turkish": "Turkish",
+        "selected": "Selected Language"
+      }
     },
     "navigation": {
       "back": "Back",

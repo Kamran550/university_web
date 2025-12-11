@@ -24,6 +24,7 @@ interface AgencyApplicationFormProps {
   facultyName: string;
   degreeId: number;
   degreeName: string;
+  teachingLanguage: "EN" | "TR";
   onSubmitSuccess?: () => void;
 }
 
@@ -32,6 +33,7 @@ export default function AgencyApplicationForm({
   facultyName,
   degreeId,
   degreeName,
+  teachingLanguage,
   onSubmitSuccess,
 }: AgencyApplicationFormProps) {
   const t = useTranslations("apply.agencyForm");
@@ -91,6 +93,8 @@ export default function AgencyApplicationForm({
       // Add locale (get from browser or Next.js)
       const locale = document.documentElement.lang || "en";
       formData.append("locale", locale);
+      // Add teaching language
+      formData.append("teachingLanguage", teachingLanguage);
 
       // Send directly to backend
       const backendUrl =

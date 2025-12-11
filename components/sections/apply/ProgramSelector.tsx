@@ -15,6 +15,7 @@ interface ProgramSelectorProps {
   selectedProgramId?: number;
   degreeId: number;
   facultyId: number;
+  teachingLanguage: "EN" | "TR";
 }
 
 export default function ProgramSelector({
@@ -22,6 +23,7 @@ export default function ProgramSelector({
   selectedProgramId,
   degreeId,
   facultyId,
+  teachingLanguage,
 }: ProgramSelectorProps) {
   const t = useTranslations("apply.programSelector");
   const [programs, setPrograms] = useState<Program[]>([]);
@@ -34,7 +36,8 @@ export default function ProgramSelector({
       setError(null);
       const data = await ProgramService.getByDegreeAndFaculty(
         degreeId,
-        facultyId
+        facultyId,
+        teachingLanguage
       );
       console.log("programs data", data);
       setPrograms(data);
@@ -50,7 +53,7 @@ export default function ProgramSelector({
     } finally {
       setLoading(false);
     }
-  }, [degreeId, facultyId, t]);
+  }, [degreeId, facultyId, teachingLanguage, t]);
 
   useEffect(() => {
     if (degreeId && facultyId) {

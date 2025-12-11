@@ -11,17 +11,20 @@ import { Program } from "@/lib/types/program";
  * Get programs by degree_id and faculty_id
  * @param degreeId - The degree ID
  * @param facultyId - The faculty ID
+ * @param lang - The teaching language (EN or TR)
  * @returns Promise<Program[]> Array of programs
  * @throws {ApiClientError} If the request fails
  */
 export async function getProgramsByDegreeAndFaculty(
   degreeId: number,
-  facultyId: number
+  facultyId: number,
+  lang: "EN" | "TR" = "EN"
 ): Promise<Program[]> {
   try {
     const params = new URLSearchParams({
       degree_id: degreeId.toString(),
       faculty_id: facultyId.toString(),
+      lang: lang,
     });
     const endpoint = `${API_CONFIG.endpoints.programs}?${params.toString()}`;
     const response = await apiGet<Program[]>(endpoint);

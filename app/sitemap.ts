@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://eipu.edu.pl";
-  const locales = ["en", "az", "tr"];
+  const locales = ["en", "tr", "ru"];
   const currentDate = new Date();
 
   // Əsas səhifələr
@@ -32,8 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: {
             en: `${baseUrl}/en${page}`,
-            az: `${baseUrl}/az${page}`,
             tr: `${baseUrl}/tr${page}`,
+            ru: `${baseUrl}/ru${page}`,
           },
         },
       });

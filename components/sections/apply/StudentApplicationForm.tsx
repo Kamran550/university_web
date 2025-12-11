@@ -33,6 +33,7 @@ interface StudentApplicationFormProps {
   facultyName: string;
   degreeId: number;
   degreeName: string;
+  teachingLanguage: "EN" | "TR";
   onSubmitSuccess?: () => void;
 }
 
@@ -40,6 +41,7 @@ export default function StudentApplicationForm({
   facultyId,
   facultyName,
   degreeId,
+  teachingLanguage,
   onSubmitSuccess,
 }: StudentApplicationFormProps) {
   const t = useTranslations("apply.studentForm");
@@ -97,7 +99,8 @@ export default function StudentApplicationForm({
         setLoadingPrograms(true);
         const data = await ProgramService.getByDegreeAndFaculty(
           degreeId,
-          facultyId
+          facultyId,
+          teachingLanguage
         );
         setPrograms(data);
       } catch (error) {
@@ -144,6 +147,8 @@ export default function StudentApplicationForm({
       // Add locale (get from browser or Next.js)
       const locale = document.documentElement.lang || "en";
       formData.append("locale", locale);
+      // Add teaching language
+      formData.append("teachingLanguage", teachingLanguage);
 
       // Send directly to backend
       const backendUrl =

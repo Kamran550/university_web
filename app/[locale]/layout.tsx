@@ -31,21 +31,21 @@ const seoData: Record<
       "peace university",
     ],
   },
-  az: {
-    title: "EIPU - European International Peace University | Study in Poland",
+  ru: {
+    title: "EIPU - Европейский Международный Университет По миру и безопасности | Study in Poland",
     description:
-      "EIPU - European International Peace University. International education in Poland with bachelor's, master's and PhD programs. Quality education through peace and global understanding.",
+      "EIPU - Европейский Международный Университет По миру и безопасности. Международный образовательный центр в Польше с программами бакалавриата, магистратуры и докторантуры. Качественное образование через мир и глобальное понимание.",
     keywords: [
       "EIPU",
-      "Avropa Beynəlxalq Sülh Universiteti",
-      "Polşada təhsil",
-      "Polşada oxumaq",
-      "beynəlxalq universitet",
-      "Polşa universiteti",
-      "bakalavr proqramları",
-      "magistr proqramları",
-      "doktorantura",
-      "Avropa universiteti",
+      "Европейский Международный Университет По миру и безопасности",
+      "Образование в Польше",
+      "Обучение в Польше",
+      "Международный университет",
+      "Польский университет",
+      "Бакалавриат в Польше",
+      "Магистратура в Польше",
+      "Докторантура в Польше",
+      "Европейский университет",
     ],
   },
   tr: {
@@ -94,12 +94,12 @@ export async function generateMetadata({
       canonical: `https://eipu.edu.pl/${locale}`,
       languages: {
         en: "https://eipu.edu.pl/en",
-        az: "https://eipu.edu.pl/az",
+        ru: "https://eipu.edu.pl/ru",
         tr: "https://eipu.edu.pl/tr",
       },
     },
     openGraph: {
-      locale: locale === "az" ? "az_AZ" : locale === "tr" ? "tr_TR" : "en_US",
+      locale: locale === "ru" ? "ru_RU" : locale === "tr" ? "tr_TR" : "en_US",
       title: seo.title,
       description: seo.description,
     },

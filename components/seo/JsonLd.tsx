@@ -9,7 +9,7 @@ export function OrganizationJsonLd() {
     name: "European International Peace University",
     alternateName: [
       "EIPU",
-      "Avropa Beynəlxalq Sülh Universiteti",
+      "Европейский Международный Университет По миру и безопасности",
       "Avrupa Uluslararası Barış Üniversitesi",
     ],
     url: "https://eipu.edu.pl",
@@ -36,7 +36,7 @@ export function OrganizationJsonLd() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "admissions",
-      availableLanguage: ["English", "Azerbaijani", "Turkish"],
+      availableLanguage: ["English", "Turkish", "Russian"],
     },
   };
 
@@ -109,7 +109,7 @@ export function WebsiteJsonLd() {
     publisher: {
       "@id": "https://eipu.edu.pl/#organization",
     },
-    inLanguage: ["en", "az", "tr"],
+    inLanguage: ["en", "tr", "ru"],
     potentialAction: {
       "@type": "SearchAction",
       target: {

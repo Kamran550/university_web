@@ -9,7 +9,7 @@ import { Degree } from "@/lib/types/degree";
 import { Faculty } from "@/lib/types/faculty";
 import ApplicantTypeSelector from "./ApplicantTypeSelector";
 import DegreeSelector from "./DegreeSelector";
-import FacultySelector from "./FacultySelector";
+import FacultySelector, { TeachingLanguage } from "./FacultySelector";
 import StudentApplicationForm from "./StudentApplicationForm";
 import AgencyApplicationForm from "./AgencyApplicationForm";
 
@@ -27,6 +27,8 @@ export default function ApplyForm() {
   );
   const [selectedDegree, setSelectedDegree] = useState<Degree | null>(null);
   const [selectedFaculty, setSelectedFaculty] = useState<Faculty | null>(null);
+  const [selectedLanguage, setSelectedLanguage] =
+    useState<TeachingLanguage | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Load state from sessionStorage on mount (only within same tab session)
@@ -39,6 +41,7 @@ export default function ApplyForm() {
           applicantType: savedType,
           selectedDegree: savedDegree,
           selectedFaculty: savedFaculty,
+          selectedLanguage: savedLanguage,
           timestamp,
         } = JSON.parse(saved);
 
@@ -50,6 +53,7 @@ export default function ApplyForm() {
           if (savedType) setApplicantType(savedType);
           if (savedDegree) setSelectedDegree(savedDegree);
           if (savedFaculty) setSelectedFaculty(savedFaculty);
+          if (savedLanguage) setSelectedLanguage(savedLanguage);
         } else {
           // Clear expired session
           sessionStorage.removeItem(STORAGE_KEY);
@@ -73,6 +77,7 @@ export default function ApplyForm() {
             applicantType,
             selectedDegree,
             selectedFaculty,
+            selectedLanguage,
             timestamp: Date.now(),
           })
         );
@@ -80,7 +85,14 @@ export default function ApplyForm() {
         console.error("Error saving apply form state:", error);
       }
     }
-  }, [currentStep, applicantType, selectedDegree, selectedFaculty, isLoaded]);
+  }, [
+    currentStep,
+    applicantType,
+    selectedDegree,
+    selectedFaculty,
+    selectedLanguage,
+    isLoaded,
+  ]);
 
   const handleApplicantTypeSelect = (type: ApplicantType) => {
     setApplicantType(type);
@@ -93,6 +105,11 @@ export default function ApplyForm() {
 
   const handleFacultySelect = (faculty: Faculty) => {
     setSelectedFaculty(faculty);
+    setSelectedLanguage(null); // Reset language when faculty changes
+  };
+
+  const handleLanguageSelect = (language: TeachingLanguage) => {
+    setSelectedLanguage(language);
   };
 
   const handleNext = () => {
@@ -118,7 +135,8 @@ export default function ApplyForm() {
   const canProceed = () => {
     if (currentStep === "type") return applicantType !== null;
     if (currentStep === "degree") return selectedDegree !== null;
-    if (currentStep === "faculty") return selectedFaculty !== null;
+    if (currentStep === "faculty")
+      return selectedFaculty !== null && selectedLanguage !== null;
     return false;
   };
 
@@ -132,7 +150,8 @@ export default function ApplyForm() {
   const isStepCompleted = (step: Step): boolean => {
     if (step === "type") return applicantType !== null;
     if (step === "degree") return selectedDegree !== null;
-    if (step === "faculty") return selectedFaculty !== null;
+    if (step === "faculty")
+      return selectedFaculty !== null && selectedLanguage !== null;
     if (step === "form") return false; // Form step is never "completed" in the traditional sense
     return false;
   };
@@ -168,6 +187,7 @@ export default function ApplyForm() {
     setApplicantType(null);
     setSelectedDegree(null);
     setSelectedFaculty(null);
+    setSelectedLanguage(null);
     sessionStorage.removeItem(STORAGE_KEY);
   };
 
@@ -245,6 +265,8 @@ export default function ApplyForm() {
             faculties={selectedDegree.faculties}
             selectedFacultyId={selectedFaculty?.id || null}
             onSelect={handleFacultySelect}
+            selectedLanguage={selectedLanguage}
+            onLanguageSelect={handleLanguageSelect}
           />
         )}
 
@@ -256,6 +278,7 @@ export default function ApplyForm() {
               facultyName={selectedFaculty.name}
               degreeId={selectedDegree?.id || 0}
               degreeName={selectedDegree?.name || ""}
+              teachingLanguage={selectedLanguage || "EN"}
               onSubmitSuccess={clearState}
             />
           )}
@@ -268,6 +291,7 @@ export default function ApplyForm() {
               facultyName={selectedFaculty.name}
               degreeId={selectedDegree?.id || 0}
               degreeName={selectedDegree?.name || ""}
+              teachingLanguage={selectedLanguage || "EN"}
               onSubmitSuccess={clearState}
             />
           )}
