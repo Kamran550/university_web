@@ -27,6 +27,8 @@ import { CheckCircle, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { ProgramService } from "@/lib/services/program.service";
 import { Program } from "@/lib/types/program";
+import { nationalities } from "@/constants/nationalities";
+import { languages } from "@/constants/languages";
 
 interface StudentApplicationFormProps {
   facultyId: number;
@@ -61,6 +63,7 @@ export default function StudentApplicationForm({
     nativeLanguage: z.string().min(1, t("required")),
     phone: z.string().min(1, t("required")),
     email: z.string().email(t("invalidEmail")),
+    passportNumber: z.string().min(1, t("required")),
     photoId: z.any().refine((file) => file?.length > 0, t("required")),
     profilePhoto: z.any().optional(),
     country: z.string().min(1, t("required")),
@@ -86,6 +89,7 @@ export default function StudentApplicationForm({
       nativeLanguage: "",
       phone: "",
       email: "",
+      passportNumber: "",
       country: "",
       city: "",
       addressLine: "",
@@ -132,6 +136,7 @@ export default function StudentApplicationForm({
       formData.append("native_language", data.nativeLanguage);
       formData.append("phone", data.phone);
       formData.append("email", data.email);
+      formData.append("passport_number", data.passportNumber);
       formData.append("country", data.country);
       formData.append("city", data.city);
       formData.append("address_line", data.addressLine);
@@ -377,9 +382,28 @@ export default function StudentApplicationForm({
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>{t("nationality")} *</FormLabel>
-                          <FormControl>
-                            <Input {...field} />
-                          </FormControl>
+                          <Select
+                            onValueChange={field.onChange}
+                            defaultValue={field.value}
+                          >
+                            <FormControl>
+                              <SelectTrigger>
+                                <SelectValue
+                                  placeholder={t("selectNationality")}
+                                />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              {nationalities.map((nationality) => (
+                                <SelectItem
+                                  key={nationality}
+                                  value={nationality}
+                                >
+                                  {nationality}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
                           <FormMessage />
                         </FormItem>
                       )}
@@ -390,9 +414,25 @@ export default function StudentApplicationForm({
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>{t("nativeLanguage")} *</FormLabel>
-                          <FormControl>
-                            <Input {...field} />
-                          </FormControl>
+                          <Select
+                            onValueChange={field.onChange}
+                            defaultValue={field.value}
+                          >
+                            <FormControl>
+                              <SelectTrigger>
+                                <SelectValue
+                                  placeholder={t("selectNativeLanguage")}
+                                />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              {languages.map((language) => (
+                                <SelectItem key={language} value={language}>
+                                  {language}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
                           <FormMessage />
                         </FormItem>
                       )}
@@ -432,6 +472,19 @@ export default function StudentApplicationForm({
                     {t("identification")}
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="passportNumber"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>{t("passportNumber")} *</FormLabel>
+                          <FormControl>
+                            <Input {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                     <FormField
                       control={form.control}
                       name="photoId"
