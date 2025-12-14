@@ -14,7 +14,7 @@ const contactInfo = {
     turkey: "+90 538 6796595",
     global: "+49 15207108026",
   },
-  email: "info@eipu.edu",
+  email: "info@eipu.edu.pl",
   address: "Ogrodowa 5800-876 Warsaw / Poland",
 };
 
@@ -94,6 +94,21 @@ export function Footer() {
                 <div className="space-y-2 flex-1">
                   <div>
                     <span className="text-gray-500 text-xs font-medium block mb-0.5">
+                      {tPhoneNumbers("turkey")}:
+                    </span>
+                    <a
+                      href={`tel:${contactInfo.phones.turkey.replace(
+                        /\s/g,
+                        ""
+                      )}`}
+                      className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
+                    >
+                      {contactInfo.phones.turkey}
+                    </a>
+                  </div>
+
+                  <div>
+                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
                       {tPhoneNumbers("poland")}:
                     </span>
                     <a
@@ -136,20 +151,6 @@ export function Footer() {
                   </div>
                   <div>
                     <span className="text-gray-500 text-xs font-medium block mb-0.5">
-                      {tPhoneNumbers("turkey")}:
-                    </span>
-                    <a
-                      href={`tel:${contactInfo.phones.turkey.replace(
-                        /\s/g,
-                        ""
-                      )}`}
-                      className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
-                    >
-                      {contactInfo.phones.turkey}
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
                       {tPhoneNumbers("global")}:
                     </span>
                     <a
@@ -164,6 +165,13 @@ export function Footer() {
                   </div>
                 </div>
               </li>
+              <li className="flex items-start space-x-3">
+                <div className="w-5 h-5 shrink-0" />
+                <span className="text-gray-400 text-sm md:text-base">
+                  {t("linesAreOpen")}
+                </span>
+              </li>
+
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <div>
