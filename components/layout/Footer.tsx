@@ -8,14 +8,14 @@ import { useTranslations } from "next-intl";
 
 const contactInfo = {
   phones: {
-    poland: "+48 12 345 6789",
-    azerbaijan: "+994 12 345 6789",
-    germany: "+49 30 12345678",
-    turkey: "+90 212 123 4567",
-    global: "+1 555 123 4567",
+    poland: "+48 431226183",
+    azerbaijan: "+994 504975252",
+    luxembourg: "+352 661115815",
+    turkey: "+90 538 6796595",
+    global: "+49 15207108026",
   },
   email: "info@eipu.edu",
-  address: "ul. Krakowska 23, 00-000 Warsaw, Poland",
+  address: "Ogrodowa 5800-876 Warsaw / Poland",
 };
 
 export function Footer() {
@@ -122,16 +122,16 @@ export function Footer() {
                   </div>
                   <div>
                     <span className="text-gray-500 text-xs font-medium block mb-0.5">
-                      {tPhoneNumbers("germany")}:
+                      {tPhoneNumbers("luxembourg")}:
                     </span>
                     <a
-                      href={`tel:${contactInfo.phones.germany.replace(
+                      href={`tel:${contactInfo.phones.luxembourg.replace(
                         /\s/g,
                         ""
                       )}`}
                       className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
                     >
-                      {contactInfo.phones.germany}
+                      {contactInfo.phones.luxembourg}
                     </a>
                   </div>
                   <div>
