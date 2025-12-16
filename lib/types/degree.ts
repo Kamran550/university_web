@@ -5,3 +5,10 @@ export interface Degree {
   name: string;
   faculties: Faculty[];
 }
+
+
+export enum DegreeType {
+  Bachelor = "bachelor",
+  Master = "master",
+  PhD = "phd",
+}

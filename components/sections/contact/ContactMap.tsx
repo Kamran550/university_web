@@ -8,15 +8,14 @@ import { useTranslations } from "next-intl";
 
 export default function ContactMap() {
   const t = useTranslations("contact.map");
-  // Google Maps embed URL - Replace with your actual address coordinates
-  // Format: https://www.google.com/maps/embed?pb=...
-  // Or use: https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=YOUR_ADDRESS
+  // Google Maps embed URL for Ogrodowa 58, Warsaw, Poland
   const mapEmbedUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.4286744962345!2d49.86755731535533!3d40.40926197936457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403087462396e2bb%3A0x7e8f4cd321cc0a72!2sBaku%2C%20Azerbaijan!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s";
+    "https://maps.google.com/maps?q=Ogrodowa+58,00-876+Warsaw,Poland&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
   const address = {
-    full: "ul. Krakowska 23, 00-000 Warsaw, Poland",
-    googleMapsUrl: "https://goo.gl/maps/...", // Replace with actual Google Maps URL
+    full: "Ogrodowa 58, 00-876 Warsaw, Poland",
+    googleMapsUrl:
+      "https://www.google.com/maps/place/Ogrodowa+58,00-876+Warsaw,Poland",
   };
 
   return (

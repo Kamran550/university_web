@@ -29,6 +29,7 @@ import { ProgramService } from "@/lib/services/program.service";
 import { Program } from "@/lib/types/program";
 import { nationalities } from "@/constants/nationalities";
 import { languages } from "@/constants/languages";
+import { DegreeType } from "@/lib/types/degree";
 
 interface StudentApplicationFormProps {
   facultyId: number;
@@ -51,7 +52,17 @@ export default function StudentApplicationForm({
   const [programs, setPrograms] = useState<Program[]>([]);
   const [loadingPrograms, setLoadingPrograms] = useState(true);
 
-  const formSchema = z.object({
+  function getDegreeType(degreeId: number): DegreeType {
+    if (degreeId === 1) return DegreeType.Bachelor;
+    if (degreeId === 2) return DegreeType.Master;
+    if (degreeId === 3) return DegreeType.PhD;
+    throw new Error("Degree type not found");
+  }
+
+  const degreeType = getDegreeType(degreeId);
+
+  // Build dynamic schema based on degree type
+  const baseSchema = {
     programId: z.string().min(1, t("required")),
     firstName: z.string().min(1, t("required")),
     lastName: z.string().min(1, t("required")),
@@ -69,8 +80,35 @@ export default function StudentApplicationForm({
     country: z.string().min(1, t("required")),
     city: z.string().min(1, t("required")),
     addressLine: z.string().min(1, t("required")),
-    diploma: z.any().optional(),
-    transcript: z.any().refine((file) => file?.length > 0, t("required")),
+  };
+
+  // Add education documents based on degree type
+  const educationDocuments: Record<string, z.ZodTypeAny> = {};
+
+  if (degreeType === DegreeType.Bachelor) {
+    educationDocuments.high_school_diploma = z.any().optional();
+    educationDocuments.high_school_transcript = z
+      .any()
+      .refine((file) => file?.length > 0, t("required"));
+  } else if (degreeType === DegreeType.Master) {
+    educationDocuments.bachelor_diploma = z.any().optional();
+    educationDocuments.bachelor_transcript = z
+      .any()
+      .refine((file) => file?.length > 0, t("required"));
+  } else if (degreeType === DegreeType.PhD) {
+    educationDocuments.bachelor_diploma = z.any().optional();
+    educationDocuments.bachelor_transcript = z
+      .any()
+      .refine((file) => file?.length > 0, t("required"));
+    educationDocuments.master_diploma = z.any().optional();
+    educationDocuments.master_transcript = z
+      .any()
+      .refine((file) => file?.length > 0, t("required"));
+  }
+
+  const formSchema = z.object({
+    ...baseSchema,
+    ...educationDocuments,
   });
 
   type FormValues = z.infer<typeof formSchema>;
@@ -118,7 +156,7 @@ export default function StudentApplicationForm({
     if (degreeId && facultyId) {
       fetchPrograms();
     }
-  }, [degreeId, facultyId]);
+  }, [degreeId, facultyId, teachingLanguage]);
 
   async function onSubmit(data: FormValues) {
     try {
@@ -141,13 +179,78 @@ export default function StudentApplicationForm({
       formData.append("city", data.city);
       formData.append("address_line", data.addressLine);
 
+      formData.append("degree_id", degreeId.toString());
+      formData.append("degree_type", degreeType.toString());
+
       // Add files
       if (data.photoId?.[0]) formData.append("photo_id", data.photoId[0]);
       if (data.profilePhoto?.[0])
         formData.append("profile_photo", data.profilePhoto[0]);
-      if (data.diploma?.[0]) formData.append("diploma", data.diploma[0]);
-      if (data.transcript?.[0])
-        formData.append("transcript", data.transcript[0]);
+
+      // Add education documents based on degree type
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // Add education documents based on degree type
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const formData_any = data as any;
+      if (degreeType === DegreeType.Bachelor) {
+        if (
+          formData_any.high_school_diploma?.length > 0 &&
+          formData_any.high_school_diploma[0]
+        )
+          formData.append(
+            "high_school_diploma",
+            formData_any.high_school_diploma[0]
+          );
+        if (
+          formData_any.high_school_transcript?.length > 0 &&
+          formData_any.high_school_transcript[0]
+        )
+          formData.append(
+            "high_school_transcript",
+            formData_any.high_school_transcript[0]
+          );
+      } else if (degreeType === DegreeType.Master) {
+        if (
+          formData_any.bachelor_diploma?.length > 0 &&
+          formData_any.bachelor_diploma[0]
+        )
+          formData.append("bachelor_diploma", formData_any.bachelor_diploma[0]);
+        if (
+          formData_any.bachelor_transcript?.length > 0 &&
+          formData_any.bachelor_transcript[0]
+        )
+          formData.append(
+            "bachelor_transcript",
+            formData_any.bachelor_transcript[0]
+          );
+      } else if (degreeType === DegreeType.PhD) {
+        if (
+          formData_any.bachelor_diploma?.length > 0 &&
+          formData_any.bachelor_diploma[0]
+        )
+          formData.append("bachelor_diploma", formData_any.bachelor_diploma[0]);
+        if (
+          formData_any.bachelor_transcript?.length > 0 &&
+          formData_any.bachelor_transcript[0]
+        )
+          formData.append(
+            "bachelor_transcript",
+            formData_any.bachelor_transcript[0]
+          );
+        if (
+          formData_any.master_diploma?.length > 0 &&
+          formData_any.master_diploma[0]
+        )
+          formData.append("master_diploma", formData_any.master_diploma[0]);
+        if (
+          formData_any.master_transcript?.length > 0 &&
+          formData_any.master_transcript[0]
+        )
+          formData.append(
+            "master_transcript",
+            formData_any.master_transcript[0]
+          );
+      }
 
       // Add locale (get from browser or Next.js)
       const locale = document.documentElement.lang || "en";
@@ -580,46 +683,188 @@ export default function StudentApplicationForm({
                     {t("educationDocuments")}
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <FormField
-                      control={form.control}
-                      name="diploma"
-                      render={({
-                        field: { value, onChange, ...fieldProps },
-                      }) => (
-                        <FormItem>
-                          <FormLabel>{t("diploma")}</FormLabel>
-                          <FormControl>
-                            <Input
-                              {...fieldProps}
-                              type="file"
-                              accept=".jpg,.jpeg,.pdf"
-                              onChange={(e) => onChange(e.target.files)}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="transcript"
-                      render={({
-                        field: { value, onChange, ...fieldProps },
-                      }) => (
-                        <FormItem>
-                          <FormLabel>{t("transcript")} *</FormLabel>
-                          <FormControl>
-                            <Input
-                              {...fieldProps}
-                              type="file"
-                              accept=".jpg,.jpeg,.pdf"
-                              onChange={(e) => onChange(e.target.files)}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                    {degreeType === DegreeType.Bachelor && (
+                      <>
+                        <FormField
+                          control={form.control}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          name={"high_school_diploma" as any}
+                          render={({
+                            field: { value, onChange, ...fieldProps },
+                          }) => (
+                            <FormItem>
+                              <FormLabel>{t("highSchoolDiploma")}</FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...fieldProps}
+                                  type="file"
+                                  accept=".jpg,.jpeg,.pdf"
+                                  onChange={(e) => onChange(e.target.files)}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          name={"high_school_transcript" as any}
+                          render={({
+                            field: { value, onChange, ...fieldProps },
+                          }) => (
+                            <FormItem>
+                              <FormLabel>
+                                {t("highSchoolTranscript")} *
+                              </FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...fieldProps}
+                                  type="file"
+                                  accept=".jpg,.jpeg,.pdf"
+                                  onChange={(e) => onChange(e.target.files)}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </>
+                    )}
+                    {degreeType === DegreeType.Master && (
+                      <>
+                        <FormField
+                          control={form.control}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          name={"bachelor_diploma" as any}
+                          render={({
+                            field: { value, onChange, ...fieldProps },
+                          }) => (
+                            <FormItem>
+                              <FormLabel>{t("bachelorDiploma")}</FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...fieldProps}
+                                  type="file"
+                                  accept=".jpg,.jpeg,.pdf"
+                                  onChange={(e) => onChange(e.target.files)}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          name={"bachelor_transcript" as any}
+                          render={({
+                            field: { value, onChange, ...fieldProps },
+                          }) => (
+                            <FormItem>
+                              <FormLabel>{t("bachelorTranscript")} *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...fieldProps}
+                                  type="file"
+                                  accept=".jpg,.jpeg,.pdf"
+                                  onChange={(e) => onChange(e.target.files)}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </>
+                    )}
+                    {degreeType === DegreeType.PhD && (
+                      <>
+                        <FormField
+                          control={form.control}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          name={"bachelor_diploma" as any}
+                          render={({
+                            field: { value, onChange, ...fieldProps },
+                          }) => (
+                            <FormItem>
+                              <FormLabel>{t("bachelorDiploma")}</FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...fieldProps}
+                                  type="file"
+                                  accept=".jpg,.jpeg,.pdf"
+                                  onChange={(e) => onChange(e.target.files)}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          name={"bachelor_transcript" as any}
+                          render={({
+                            field: { value, onChange, ...fieldProps },
+                          }) => (
+                            <FormItem>
+                              <FormLabel>{t("bachelorTranscript")} *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...fieldProps}
+                                  type="file"
+                                  accept=".jpg,.jpeg,.pdf"
+                                  onChange={(e) => onChange(e.target.files)}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          name={"master_diploma" as any}
+                          render={({
+                            field: { value, onChange, ...fieldProps },
+                          }) => (
+                            <FormItem>
+                              <FormLabel>{t("masterDiploma")}</FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...fieldProps}
+                                  type="file"
+                                  accept=".jpg,.jpeg,.pdf"
+                                  onChange={(e) => onChange(e.target.files)}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          name={"master_transcript" as any}
+                          render={({
+                            field: { value, onChange, ...fieldProps },
+                          }) => (
+                            <FormItem>
+                              <FormLabel>{t("masterTranscript")} *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  {...fieldProps}
+                                  type="file"
+                                  accept=".jpg,.jpeg,.pdf"
+                                  onChange={(e) => onChange(e.target.files)}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </>
+                    )}
                   </div>
                 </div>
 
