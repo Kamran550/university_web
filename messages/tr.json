@@ -21,6 +21,8 @@
   "nav": {
     "home": "Ana Sayfa",
     "about": "Hakkımızda",
+    "rectorate": "Rektörlük",
+    "administrativeUnits": "İdari Birimler",
     "fees": "Ücretler",
     "programs": "Programlar",
     "news": "Haberler",
@@ -144,6 +146,54 @@
           "title": "Genişleme",
           "description": "50'den fazla ülkeden öğrenci ağırlayarak programlarımızı ve tesislerimizi genişlettik ve çeşitliliğe bağlılığımızı güçlendirdik."
         }
+      }
+    },
+    "rectorate": {
+      "title": "Rektörlük",
+      "profile": {
+        "title": "Rektör Profili",
+        "fullName": "Ad Soyad",
+        "position": "Pozisyon",
+        "fullNameValue": "Prof. Dr. Serdar Koral",
+        "positionValue": "Avrupa Uluslararası Barış Üniversitesi (EIPU) Rektörü",
+        "description": "Prof. Dr. Serdar Koral, uluslararası saygın bir akademisyen, yüksek öğretim lideri ve barış odaklı öğrenme savunucusudur. Kıtalar arası yirmi yılı aşkın bir kariyere sahip olan Koral, Avrupa Uluslararası Barış Üniversitesi'ne (EIPU) akademik mükemmellik, küresel vizyon ve sosyal sorumluluk sahibi liderlerin bir sonraki neslini şekillendirme konusunda derin bir bağlılık getirmektedir.",
+        "qualifications": "Dr. Koral, barış ve çatışma çalışmaları, küresel diplomasi ve kültürlerarası iletişim alanlarında uzmanlaşmış Siyaset Bilimi ve Uluslararası İlişkiler alanında doktora derecesine sahiptir. Avrupa, Orta Asya ve Orta Doğu'daki tanınmış kurumlarda akademik ve idari pozisyonlar almıştır. Akademik yolculuğu, yüksek öğretimde diyalog, eleştirel düşünme ve etik liderliği teşvik etmeye odaklanmıştır.",
+        "email": "E-posta",
+        "emailValue": "serdar.koral@eipu.edu.pl"
+      },
+      "welcomeMessage": {
+        "title": "Rektörden Hoş Geldiniz Mesajı",
+        "greeting": "Sevgili Öğrenciler, Fakülte ve Personel,",
+        "paragraph1": "Üniversitemize hoş geldiniz! Yeni bir akademik yolculuğun başında sizleri selamlamak benim için büyük bir onurdur. Kurumumuz, herkesin entelektüel ve kişisel olarak büyüyebileceği destekleyici, yenilikçi ve kapsayıcı bir ortam sağlamaya kararlıdır.",
+        "paragraph2": "Eğitimin sadece bilgi edinmekle ilgili olmadığına, aynı zamanda eleştirel düşünme, yaratıcılık ve topluma karşı sorumluluk duygusu geliştirmekle ilgili olduğuna inanıyoruz. Bu yolculuğa çıkarken, mevcut fırsatlardan tam olarak yararlanmanızı, topluluğunuzla aktif olarak etkileşim kurmanızı ve yaptığınız her şeyde mükemmellik için çaba göstermenizi teşvik ediyorum.",
+        "paragraph3": "Birlikte, öğrenme, araştırma ve işbirliği yoluyla daha parlak bir gelecek inşa etmeye çalışacağız. Buradaki zamanınızın hem ödüllendirici hem de ilham verici olacağına inanıyorum.",
+        "closing": "Çalışmalarınızda ve ötesinde başarı ve tatmin dilerim.",
+        "signature": "Saygılarımla,",
+        "signatureName": "Prof. Dr. Serdar Koral",
+        "signatureTitle": "Rektör"
+      },
+      "tabs": {
+        "profile": "Profil",
+        "welcomeMessage": "Hoş Geldiniz Mesajı"
+      }
+    },
+    "administrativeUnits": {
+      "title": "İdari Birimler",
+      "subtitle": "Mükemmellik ve hizmete adanmış idari ekibimizle tanışın",
+      "viceRector": {
+        "position": "Rektör Yardımcısı",
+        "name": "Marlene Treiblach",
+        "email": "marlene.treiblach@eipu.edu.pl"
+      },
+      "rectorAdvisor": {
+        "position": "Rektör Danışmanı",
+        "name": "Milena Zaworska",
+        "email": "milena.zaworska@eipu.edu.pl"
+      },
+      "secretaryGeneral": {
+        "position": "Genel Sekreter",
+        "name": "Martin Dravoski",
+        "email": "martin.dravoski@eipu.edu.pl"
       }
     }
   },

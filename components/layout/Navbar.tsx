@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,15 +25,39 @@ function Navbar() {
   const t = useTranslations("nav");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const aboutDropdownRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { href: `/${locale}`, label: t("home") },
-    { href: `/${locale}/about`, label: t("about") },
     { href: `/${locale}/fees`, label: t("fees") },
     { href: `/${locale}/programs`, label: t("programs") },
     { href: `/${locale}/news`, label: t("news") },
     { href: `/${locale}/contact`, label: t("contact") },
   ];
+
+  const aboutDropdownItems = [
+    { href: `/${locale}/about`, label: t("about") },
+    { href: `/${locale}/about/rectorate`, label: t("rectorate") },
+    { href: `/${locale}/about/administrative-units`, label: t("administrativeUnits") },
+  ];
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        aboutDropdownRef.current &&
+        !aboutDropdownRef.current.contains(event.target as Node)
+      ) {
+        setAboutDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -74,6 +98,40 @@ function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-2 xl:space-x-4">
+            {/* About Dropdown */}
+            <div
+              ref={aboutDropdownRef}
+              className="relative"
+              onMouseEnter={() => setAboutDropdownOpen(true)}
+              onMouseLeave={() => setAboutDropdownOpen(false)}
+            >
+              <button
+                className="px-4 py-2 text-base xl:text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1"
+              >
+                {t("about")}
+                <ChevronDown
+                  className={cn(
+                    "h-4 w-4 transition-transform",
+                    aboutDropdownOpen && "rotate-180"
+                  )}
+                />
+              </button>
+              {aboutDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-slate-900 rounded-lg shadow-lg border border-gray-200 dark:border-slate-700 overflow-hidden z-50">
+                  {aboutDropdownItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-3 text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                      onClick={() => setAboutDropdownOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -119,6 +177,24 @@ function Navbar() {
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col mt-8 space-y-4">
+                  {/* About in Mobile */}
+                  <div className="px-4">
+                    <div className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      {t("about")}
+                    </div>
+                    <div className="flex flex-col space-y-2 ml-4">
+                      {aboutDropdownItems.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="px-4 py-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-foreground rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
