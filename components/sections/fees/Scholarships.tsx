@@ -175,7 +175,7 @@ export default function Scholarships() {
           className="mt-12 text-center"
         >
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link href={`/${locale}/apply`}>{t("apply")}</Link>
+            <Link href={`/apply`}>{t("apply")}</Link>
           </Button>
         </motion.div>
       </div>

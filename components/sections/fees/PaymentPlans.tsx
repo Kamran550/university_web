@@ -122,7 +122,7 @@ export default function PaymentPlans() {
           className="mt-12 text-center"
         >
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link href={`/${locale}/contact`}>{t("contact")}</Link>
+            <Link href={`/contact`}>{t("contact")}</Link>
           </Button>
         </motion.div>
       </div>
