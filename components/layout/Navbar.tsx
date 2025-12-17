@@ -26,6 +26,7 @@ function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [mobileAboutDropdownOpen, setMobileAboutDropdownOpen] = useState(false);
   const aboutDropdownRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
@@ -39,7 +40,10 @@ function Navbar() {
   const aboutDropdownItems = [
     { href: `/${locale}/about`, label: t("about") },
     { href: `/${locale}/about/rectorate`, label: t("rectorate") },
-    { href: `/${locale}/about/administrative-units`, label: t("administrativeUnits") },
+    {
+      href: `/${locale}/about/administrative-units`,
+      label: t("administrativeUnits"),
+    },
   ];
 
   // Close dropdown when clicking outside
@@ -105,9 +109,7 @@ function Navbar() {
               onMouseEnter={() => setAboutDropdownOpen(true)}
               onMouseLeave={() => setAboutDropdownOpen(false)}
             >
-              <button
-                className="px-4 py-2 text-base xl:text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1"
-              >
+              <button className="px-4 py-2 text-base xl:text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors flex items-center gap-1">
                 {t("about")}
                 <ChevronDown
                   className={cn(
@@ -179,21 +181,37 @@ function Navbar() {
                 <nav className="flex flex-col mt-8 space-y-4">
                   {/* About in Mobile */}
                   <div className="px-4">
-                    <div className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      {t("about")}
-                    </div>
-                    <div className="flex flex-col space-y-2 ml-4">
-                      {aboutDropdownItems.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="px-4 py-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-foreground rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
+                    <button
+                      onClick={() =>
+                        setMobileAboutDropdownOpen(!mobileAboutDropdownOpen)
+                      }
+                      className="w-full flex items-center justify-between px-4 py-3 text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                    >
+                      <span>{t("about")}</span>
+                      <ChevronDown
+                        className={cn(
+                          "h-5 w-5 transition-transform",
+                          mobileAboutDropdownOpen && "rotate-180"
+                        )}
+                      />
+                    </button>
+                    {mobileAboutDropdownOpen && (
+                      <div className="flex flex-col space-y-2 ml-4 mt-2">
+                        {aboutDropdownItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setMobileAboutDropdownOpen(false);
+                            }}
+                            className="px-4 py-2 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-foreground rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   {navLinks.map((link) => (
                     <Link
