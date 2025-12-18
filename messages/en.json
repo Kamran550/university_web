@@ -194,6 +194,11 @@
         "position": "Secretary General",
         "name": "Martin Dravoski",
         "email": "martin.dravoski@eipu.edu.pl"
+      },
+      "officeDirector": {
+        "position": "Office Director",
+        "name": "Elvir Droslan",
+        "email": "elvir.droslan@eipu.edu.pl"
       }
     }
   },

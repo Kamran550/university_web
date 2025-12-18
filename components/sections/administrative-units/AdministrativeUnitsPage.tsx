@@ -31,12 +31,19 @@ export default function AdministrativeUnitsPage() {
       nameKey: "secretaryGeneral.name",
       emailKey: "secretaryGeneral.email",
     },
+    {
+      id: "office-director",
+      image: "/images/office-director.png",
+      positionKey: "officeDirector.position",
+      nameKey: "officeDirector.name",
+      emailKey: "officeDirector.email",
+    }
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-black dark:to-slate-950 font-sans pt-24 pb-20">
+    <main className="min-h-screen bg-linear-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-black dark:to-slate-950 font-sans pt-24 pb-20">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-primary/10 via-primary/5 to-transparent dark:from-primary/20 dark:via-primary/10 border-b border-gray-200/50 dark:border-slate-800/50">
+      <div className="relative bg-linear-to-r from-primary/10 via-primary/5 to-transparent dark:from-primary/20 dark:via-primary/10 border-b border-gray-200/50 dark:border-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -98,10 +105,10 @@ export default function AdministrativeUnitsPage() {
                       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
                         {t(member.nameKey)}
                       </h2>
-                      <div className="h-1 w-20 bg-gradient-to-r from-primary to-primary/50 rounded-full"></div>
+                      <div className="h-1 w-20 bg-linear-to-r from-primary to-primary/50 rounded-full"></div>
                     </div>
 
-                    <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-gray-50 to-transparent dark:from-slate-800/50 rounded-xl border border-gray-200/50 dark:border-slate-700/50">
+                    <div className="flex items-center gap-3 p-4 bg-linear-to-r from-gray-50 to-transparent dark:from-slate-800/50 rounded-xl border border-gray-200/50 dark:border-slate-700/50">
                       <div className="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg">
                         <Mail className="h-5 w-5 text-primary" />
                       </div>

@@ -194,6 +194,11 @@
         "position": "Генеральный секретарь",
         "name": "Martin Dravoski",
         "email": "martin.dravoski@eipu.edu.pl"
+      },
+      "officeDirector": {
+        "position": "Директор офиса",
+        "name": "Elvir Droslan",
+        "email": "elvir.droslan@eipu.edu.pl"
       }
     }
   },
