@@ -7,8 +7,8 @@ import { useTranslations } from "next-intl";
 
 const contactInfo = {
   phone: {
-    primary: "+48 12 345 6789",
-    secondary: "+48 12 345 6789",
+    primary: "+48 579369968",
+    secondary: "+48 579369968",
     hours: "Mon-Fri: 9:00 AM - 6:00 PM",
   },
   email: {

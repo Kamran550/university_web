@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 
 const contactInfo = {
   phones: {
-    poland: "+48 431226183",
+    poland: "+48 579369968",
     azerbaijan: "+994 504975252",
     luxembourg: "+352 661115815",
     turkey: "+90 538 6796595",
