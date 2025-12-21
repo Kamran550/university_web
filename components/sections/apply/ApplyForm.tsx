@@ -12,8 +12,9 @@ import DegreeSelector from "./DegreeSelector";
 import FacultySelector, { TeachingLanguage } from "./FacultySelector";
 import StudentApplicationForm from "./StudentApplicationForm";
 import AgencyApplicationForm from "./AgencyApplicationForm";
+import TransferApplicationForm from "./TransferApplicationForm";
 
-type ApplicantType = "student" | "agency";
+type ApplicantType = "student" | "agency" | "transfer";
 type Step = "type" | "degree" | "faculty" | "form";
 
 const STORAGE_KEY = "apply_form_state";
@@ -287,6 +288,19 @@ export default function ApplyForm() {
           selectedFaculty &&
           applicantType === "agency" && (
             <AgencyApplicationForm
+              facultyId={selectedFaculty.id}
+              facultyName={selectedFaculty.name}
+              degreeId={selectedDegree?.id || 0}
+              degreeName={selectedDegree?.name || ""}
+              teachingLanguage={selectedLanguage || "EN"}
+              onSubmitSuccess={clearState}
+            />
+          )}
+
+        {currentStep === "form" &&
+          selectedFaculty &&
+          applicantType === "transfer" && (
+            <TransferApplicationForm
               facultyId={selectedFaculty.id}
               facultyName={selectedFaculty.name}
               degreeId={selectedDegree?.id || 0}

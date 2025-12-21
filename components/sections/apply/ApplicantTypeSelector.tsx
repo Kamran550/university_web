@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { User, Building2, Check } from "lucide-react";
+import { User, Building2, Check, ArrowRightLeft } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-type ApplicantType = "student" | "agency";
+type ApplicantType = "student" | "agency" | "transfer";
 
 interface ApplicantTypeSelectorProps {
   selectedType: ApplicantType | null;
@@ -35,7 +35,7 @@ export default function ApplicantTypeSelector({
           </p>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {/* Student Option */}
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button
@@ -80,6 +80,30 @@ export default function ApplicantTypeSelector({
                 <div className="text-center">
                   <h3 className="text-xl font-semibold mb-2">{t("agency")}</h3>
                   <p className="text-sm opacity-90">{t("agencyDesc")}</p>
+                </div>
+              </Button>
+            </motion.div>
+
+            {/* Transfer Option */}
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Button
+                variant={selectedType === "transfer" ? "default" : "outline"}
+                className={`w-full h-auto p-6 flex flex-col items-center gap-4 ${
+                  selectedType === "transfer"
+                    ? "bg-primary text-primary-foreground"
+                    : "hover:border-primary"
+                }`}
+                onClick={() => onSelect("transfer")}
+              >
+                <div className="relative">
+                  <ArrowRightLeft className="w-16 h-16" />
+                  {selectedType === "transfer" && (
+                    <Check className="w-6 h-6 absolute -top-2 -right-2 bg-white rounded-full text-primary" />
+                  )}
+                </div>
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold mb-2">{t("transfer")}</h3>
+                  <p className="text-sm opacity-90">{t("transferDesc")}</p>
                 </div>
               </Button>
             </motion.div>
