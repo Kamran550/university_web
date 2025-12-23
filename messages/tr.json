@@ -27,7 +27,8 @@
     "programs": "Programlar",
     "news": "Haberler",
     "contact": "İletişim",
-    "apply": "Başvur"
+    "apply": "Başvur",
+    "eLibrary": "E-Kütüphane"
   },
   "hero": {
     "title": "Dünya Standartlarında Eğitimle Geleceğinizi Şekillendirin",
@@ -771,6 +772,53 @@
       "submit": "Başvuruyu Gönder",
       "submitSuccess": "Başvuru başarıyla gönderildi!",
       "submitError": "Başvuru gönderilemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "eLibrary": {
+    "hero": {
+      "title": "E-Kütüphane",
+      "subtitle": "Akademik araştırma ve öğrenme için dünya çapında güvenilir kaynaklara erişin. Açık erişim veritabanları, ders materyalleri ve akademik yayınlara ücretsiz erişim sağlayın."
+    },
+    "resources": {
+      "title": "Açık Erişim Kaynakları",
+      "subtitle": "Öğrencilerimiz ve araştırmacılarımız için seçilmiş güvenilir akademik kaynaklar",
+      "footer": "Bu kaynaklar öğrencilerimize ve araştırmacılarımıza ücretsiz erişim sağlamaktadır. Tüm kaynaklar açık erişimli ve akademik araştırma için uygundur.",
+      "ankuni": {
+        "name": "Ankara Üniversitesi",
+        "description": "Türkiye'nin en köklü üniversitelerinden biri olan Ankara Üniversitesi'nin akademik kaynaklarına erişim."
+      },
+      "arxiv": {
+        "name": "arXiv",
+        "description": "Fizik, matematik, bilgisayar bilimleri ve diğer alanlarda ön baskı makaleler için açık erişim arşivi."
+      },
+      "core": {
+        "name": "CORE",
+        "description": "Dünyanın en büyük açık erişim araştırma makaleleri koleksiyonu."
+      },
+      "doaj": {
+        "name": "DOAJ",
+        "description": "Açık erişimli, hakemli dergilerin dizini. Kaliteli akademik yayınlara ücretsiz erişim."
+      },
+      "eric": {
+        "name": "ERIC",
+        "description": "Eğitim araştırmaları ve bilgileri için kapsamlı dijital kütüphane."
+      },
+      "mitOcw": {
+        "name": "MIT OpenCourseWare",
+        "description": "Massachusetts Institute of Technology'nin ücretsiz online ders materyalleri ve kaynakları."
+      },
+      "odtuMetu": {
+        "name": "ODTÜ / METU",
+        "description": "Orta Doğu Teknik Üniversitesi'nin açık erişimli akademik kaynakları ve ders materyalleri."
+      },
+      "otl": {
+        "name": "Open Textbook Library",
+        "description": "Ücretsiz, açık lisanslı ders kitapları koleksiyonu. Yüksek kaliteli akademik içerikler."
+      },
+      "sgh": {
+        "name": "SGH Warsaw School",
+        "description": "Varşova İktisat Okulu'nun akademik kaynakları ve araştırma materyalleri."
+      }
     }
   }
 }

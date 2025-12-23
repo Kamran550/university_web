@@ -44,6 +44,10 @@ function Navbar() {
       href: `/${locale}/about/administrative-units`,
       label: t("administrativeUnits"),
     },
+    {
+      href: `/${locale}/e-library`,
+      label: t("eLibrary"),
+    },
   ];
 
   // Close dropdown when clicking outside

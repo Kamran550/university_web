@@ -27,7 +27,8 @@
     "programs": "Programs",
     "news": "News",
     "contact": "Contact",
-    "apply": "Apply"
+    "apply": "Apply",
+    "eLibrary": "E-Library"
   },
   "hero": {
     "title": "Shape Your Future with a World-Class Education",
@@ -770,6 +771,53 @@
       "submit": "Submit Application",
       "submitSuccess": "Application submitted successfully!",
       "submitError": "Failed to submit application. Please try again."
+    }
+  },
+  "eLibrary": {
+    "hero": {
+      "title": "E-Library",
+      "subtitle": "Access trusted resources worldwide for academic research and learning. Get free access to open access databases, course materials, and academic publications."
+    },
+    "resources": {
+      "title": "Open Access Resources",
+      "subtitle": "Curated trusted academic resources for our students and researchers",
+      "footer": "These resources provide free access to our students and researchers. All resources are open access and suitable for academic research.",
+      "ankuni": {
+        "name": "Ankara University",
+        "description": "Access to academic resources from Ankara University, one of Turkey's oldest universities."
+      },
+      "arxiv": {
+        "name": "arXiv",
+        "description": "Open access archive for preprints in physics, mathematics, computer science, and other fields."
+      },
+      "core": {
+        "name": "CORE",
+        "description": "The world's largest collection of open access research articles."
+      },
+      "doaj": {
+        "name": "DOAJ",
+        "description": "Directory of open access, peer-reviewed journals. Free access to quality academic publications."
+      },
+      "eric": {
+        "name": "ERIC",
+        "description": "Comprehensive digital library for education research and information."
+      },
+      "mitOcw": {
+        "name": "MIT OpenCourseWare",
+        "description": "Free online course materials and resources from Massachusetts Institute of Technology."
+      },
+      "odtuMetu": {
+        "name": "METU / ODTÜ",
+        "description": "Open access academic resources and course materials from Middle East Technical University."
+      },
+      "otl": {
+        "name": "Open Textbook Library",
+        "description": "Collection of free, open-licensed textbooks. High-quality academic content."
+      },
+      "sgh": {
+        "name": "SGH Warsaw School",
+        "description": "Academic resources and research materials from Warsaw School of Economics."
+      }
     }
   }
 }
