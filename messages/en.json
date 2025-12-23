@@ -27,8 +27,7 @@
     "programs": "Programs",
     "news": "News",
     "contact": "Contact",
-    "apply": "Apply",
-    "eLibrary": "E-Library"
+    "apply": "Apply"
   },
   "hero": {
     "title": "Shape Your Future with a World-Class Education",
@@ -591,7 +590,8 @@
       "programs": "Programs",
       "fees": "Fees",
       "contact": "Contact",
-      "apply": "Apply"
+      "apply": "Apply",
+      "eLibrary": "E-Library"
     },
     "universityLinks": {
       "academicPrograms": "Academic Programs",

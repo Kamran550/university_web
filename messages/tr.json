@@ -27,8 +27,7 @@
     "programs": "Programlar",
     "news": "Haberler",
     "contact": "İletişim",
-    "apply": "Başvur",
-    "eLibrary": "E-Kütüphane"
+    "apply": "Başvur"
   },
   "hero": {
     "title": "Dünya Standartlarında Eğitimle Geleceğinizi Şekillendirin",
@@ -592,7 +591,8 @@
       "programs": "Programlar",
       "fees": "Ücretler",
       "contact": "İletişim",
-      "apply": "Başvur"
+      "apply": "Başvur",
+      "eLibrary": "E-Kütüphane"
     },
     "universityLinks": {
       "academicPrograms": "Akademik Programlar",

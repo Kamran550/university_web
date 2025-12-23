@@ -31,6 +31,7 @@ export function Footer() {
     { href: "/fees", key: "fees" },
     { href: "/contact", key: "contact" },
     { href: "/apply", key: "apply" },
+    { href: "/e-library", key: "eLibrary" },
   ];
 
   const universityLinks = [
