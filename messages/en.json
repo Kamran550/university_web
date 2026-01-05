@@ -31,7 +31,7 @@
   },
   "hero": {
     "title": "Shape Your Future with a World-Class Education",
-    "subtitle": "Join a global community of learners and gain the skills to lead tomorrow. Admissions are now open for the Fall 2025 intake.",
+    "subtitle": "Join a global community of learners and gain the skills to lead tomorrow. Admissions are now open for the Spring 2026 intake.",
     "primaryButton": "Apply Now",
     "secondaryButton": "Explore Programs"
   },
@@ -690,6 +690,7 @@
       "faculty": "Faculty",
       "required": "Required field",
       "invalidEmail": "Invalid email address",
+      "emailTaken": "This email address is already associated with a student application in our system. If you believe this is an error, please contact our support team or use a different email address.",
       "submitting": "Submitting...",
       "submit": "Submit Application",
       "submitSuccess": "Application submitted successfully!",

@@ -13,19 +13,19 @@ const contactInfo = {
   },
   email: {
     primary: "info@eipu.edu",
-    admissions: "admissions@eipu.edu",
-    support: "support@eipu.edu",
+    admissions: "international@eipu.edu",
+    support: "rectorate@eipu.edu",
   },
   address: {
-    street: "ul. Krakowska 23",
+    street: "Ogrodowa 5800-876",
     city: "Warsaw, Poland",
     zip: "00-000",
     country: "Poland",
   },
   hours: {
     weekdays: "Monday - Friday: 9:00 AM - 6:00 PM",
-    saturday: "Saturday: 10:00 AM - 4:00 PM",
     sunday: "Sunday: Closed",
+    saturday: "Saturday: Closed",
   },
 };
 
@@ -197,9 +197,8 @@ export default function ContactInfo() {
                 <h3 className="text-xl font-bold">{t("officeHours")}</h3>
               </div>
               <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-                <p>{t("hours.weekdays")}</p>
                 <p>{t("hours.saturday")}</p>
-                <p className="text-muted-foreground">{t("hours.sunday")}</p>
+                <p>{t("hours.sunday")}</p>
               </div>
             </CardContent>
           </Card>

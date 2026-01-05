@@ -31,7 +31,7 @@
   },
   "hero": {
     "title": "Dünya Standartlarında Eğitimle Geleceğinizi Şekillendirin",
-    "subtitle": "Küresel öğrenci topluluğuna katılın ve yarının lideri olmak için gerekli becerileri kazanın. 2025 Güz dönemi başvuruları şimdi açık.",
+    "subtitle": "Küresel öğrenci topluluğuna katılın ve yarının lideri olmak için gerekli becerileri kazanın. 2026 Bahar Dönemi başvuruları şimdi açık.",
     "primaryButton": "Şimdi Başvur",
     "secondaryButton": "Programları Keşfet"
   },
@@ -691,7 +691,8 @@
       "faculty": "Fakülte",
       "required": "Zorunlu alan",
       "invalidEmail": "Geçersiz e-posta adresi",
-      "submitting": "Gönderiliyor...",
+      "emailTaken": "Bu e-posta adresi zaten sistemimizde bir öğrenci başvurusu ile ilişkilidir. Bu bir hata ise lütfen destek ekibimizle iletişime geçin veya farklı bir e-posta adresi kullanın.",
+    "submitting": "Gönderiliyor...",
       "submit": "Başvuruyu Gönder",
       "submitSuccess": "Başvuru başarıyla gönderildi!",
       "submitError": "Başvuru gönderilemedi. Lütfen tekrar deneyin."
