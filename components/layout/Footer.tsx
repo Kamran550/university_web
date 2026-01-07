@@ -9,7 +9,6 @@ import { useTranslations } from "next-intl";
 const contactInfo = {
   phones: {
     poland: "+48 579369968",
-    azerbaijan: "+994 772339907",
     luxembourg: "+352 661115815",
     turkey: "+90 538 6796595",
     global: "+49 15207108026",
@@ -120,20 +119,6 @@ export function Footer() {
                       className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
                     >
                       {contactInfo.phones.poland}
-                    </a>
-                  </div>
-                  <div>
-                    <span className="text-gray-500 text-xs font-medium block mb-0.5">
-                      {tPhoneNumbers("azerbaijan")}:
-                    </span>
-                    <a
-                      href={`tel:${contactInfo.phones.azerbaijan.replace(
-                        /\s/g,
-                        ""
-                      )}`}
-                      className="text-gray-400 hover:text-white transition-colors text-sm md:text-base"
-                    >
-                      {contactInfo.phones.azerbaijan}
                     </a>
                   </div>
                   <div>
