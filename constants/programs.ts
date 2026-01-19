@@ -458,28 +458,6 @@ export const programs: Program[] = [
     ],
   },
   {
-    id: "ba-exercise-sports-disabilities",
-    title: "Exercise and Sports Sciences for People with Disabilities",
-    category: "undergraduate",
-    degree: "Bachelor's",
-    duration: "4 Years",
-    description:
-      "Specialized program focusing on adaptive sports, rehabilitation, and inclusive physical activity for people with disabilities.",
-    features: [
-      "Adaptive sports",
-      "Rehabilitation techniques",
-      "Inclusive programming",
-      "Disability studies",
-      "Field experience",
-    ],
-    career: [
-      "Adaptive Sports Specialist",
-      "Rehabilitation Specialist",
-      "Inclusive Fitness Trainer",
-      "Disability Sports Coordinator",
-    ],
-  },
-  {
     id: "ba-health-management",
     title: "Health Management",
     category: "undergraduate",
@@ -499,28 +477,6 @@ export const programs: Program[] = [
       "Hospital Manager",
       "Health Policy Analyst",
       "Healthcare Consultant",
-    ],
-  },
-  {
-    id: "ba-cosmetology",
-    title: "Cosmetology",
-    category: "undergraduate",
-    degree: "Bachelor's",
-    duration: "4 Years",
-    description:
-      "Comprehensive cosmetology program covering beauty treatments, skincare, and salon management.",
-    features: [
-      "Beauty techniques",
-      "Skincare science",
-      "Salon management",
-      "Product knowledge",
-      "Practical training",
-    ],
-    career: [
-      "Cosmetologist",
-      "Beauty Consultant",
-      "Salon Manager",
-      "Skincare Specialist",
     ],
   },
   {
@@ -696,28 +652,6 @@ export const programs: Program[] = [
   },
   // Master's Programs from ISTU Price List 2025
   {
-    id: "ma-physical-activity-health-sports",
-    title: "Physical Activity Health and Sports",
-    category: "graduate",
-    degree: "Master's",
-    duration: "2 Years",
-    description:
-      "Advanced program in physical activity, health promotion, and sports science for professionals in the fitness and sports industry.",
-    features: [
-      "Advanced exercise physiology",
-      "Health promotion",
-      "Sports performance",
-      "Research methods",
-      "Thesis option",
-    ],
-    career: [
-      "Sports Scientist",
-      "Health Promotion Specialist",
-      "Exercise Physiologist",
-      "Research Scientist",
-    ],
-  },
-  {
     id: "ma-aviation-systems-technologies",
     title: "Aviation Systems and Technologies",
     category: "graduate",
@@ -759,28 +693,6 @@ export const programs: Program[] = [
       "Technical Director",
       "Project Director",
       "Engineering Consultant",
-    ],
-  },
-  {
-    id: "ma-quality-compliance-engineering",
-    title: "Quality and Compliance Assessment Engineering",
-    category: "graduate",
-    degree: "Master's",
-    duration: "2 Years",
-    description:
-      "Master quality assurance, compliance standards, and assessment methodologies for engineering and manufacturing industries.",
-    features: [
-      "Quality systems",
-      "Compliance standards",
-      "Assessment methods",
-      "ISO certifications",
-      "Thesis option",
-    ],
-    career: [
-      "Quality Engineer",
-      "Compliance Specialist",
-      "Quality Manager",
-      "Auditor",
     ],
   },
   {
