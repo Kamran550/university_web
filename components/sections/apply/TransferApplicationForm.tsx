@@ -346,7 +346,7 @@ export default function TransferApplicationForm({
   }
 
   // Generate course options (2 to 10)
-  const courseOptions = Array.from({ length: 3 }, (_, i) => (i + 2).toString());
+  const courseOptions = Array.from({ length: 4 }, (_, i) => (i + 1).toString());
 
   return (
     <motion.div
