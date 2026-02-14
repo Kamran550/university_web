@@ -142,7 +142,7 @@ export default function StudentApplicationForm({
         const data = await ProgramService.getByDegreeAndFaculty(
           degreeId,
           facultyId,
-          teachingLanguage
+          teachingLanguage,
         );
         setPrograms(data);
       } catch (error) {
@@ -199,7 +199,7 @@ export default function StudentApplicationForm({
         )
           formData.append(
             "high_school_diploma",
-            formData_any.high_school_diploma[0]
+            formData_any.high_school_diploma[0],
           );
         if (
           formData_any.high_school_transcript?.length > 0 &&
@@ -207,7 +207,7 @@ export default function StudentApplicationForm({
         )
           formData.append(
             "high_school_transcript",
-            formData_any.high_school_transcript[0]
+            formData_any.high_school_transcript[0],
           );
       } else if (degreeType === DegreeType.Master) {
         if (
@@ -221,7 +221,7 @@ export default function StudentApplicationForm({
         )
           formData.append(
             "bachelor_transcript",
-            formData_any.bachelor_transcript[0]
+            formData_any.bachelor_transcript[0],
           );
       } else if (degreeType === DegreeType.PhD) {
         if (
@@ -235,7 +235,7 @@ export default function StudentApplicationForm({
         )
           formData.append(
             "bachelor_transcript",
-            formData_any.bachelor_transcript[0]
+            formData_any.bachelor_transcript[0],
           );
         if (
           formData_any.master_diploma?.length > 0 &&
@@ -248,7 +248,7 @@ export default function StudentApplicationForm({
         )
           formData.append(
             "master_transcript",
-            formData_any.master_transcript[0]
+            formData_any.master_transcript[0],
           );
       }
 
@@ -278,7 +278,7 @@ export default function StudentApplicationForm({
             const emailError = errors.email.find(
               (err: string) =>
                 err.toLowerCase().includes("already been taken") ||
-                err.toLowerCase().includes("already taken")
+                err.toLowerCase().includes("already taken"),
             );
 
             if (emailError) {
@@ -333,7 +333,7 @@ export default function StudentApplicationForm({
       alert(
         `Failed to submit application: ${
           error instanceof Error ? error.message : "Unknown error"
-        }`
+        }`,
       );
     }
   }
@@ -397,21 +397,32 @@ export default function StudentApplicationForm({
                               defaultValue={field.value}
                             >
                               <FormControl>
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full min-w-[320px] sm:min-w-[380px]">
                                   <SelectValue
                                     placeholder={t("selectProgram")}
                                   />
                                 </SelectTrigger>
                               </FormControl>
-                              <SelectContent>
+                              <SelectContent className="min-w-[320px] sm:min-w-[380px]">
                                 {programs.map((program) => (
                                   <SelectItem
                                     key={program.id}
                                     value={program.id.toString()}
+                                    className="py-3"
                                   >
-                                    {program.name}
-                                    {program.price_per_year &&
-                                      ` - €${program.price_per_year}/year`}
+                                    <span className="inline-flex flex-wrap items-baseline gap-x-1.5">
+                                      <span>{program.name}</span>
+                                      {program.is_thesis && (
+                                        <span className="text-muted-foreground">
+                                          – {program.is_thesis}
+                                        </span>
+                                      )}
+                                      {program.price_per_year != null && (
+                                        <span className="text-muted-foreground">
+                                          – €{program.price_per_year}/year
+                                        </span>
+                                      )}
+                                    </span>
                                   </SelectItem>
                                 ))}
                               </SelectContent>
