@@ -407,21 +407,32 @@ export default function TransferApplicationForm({
                               defaultValue={field.value}
                             >
                               <FormControl>
-                                <SelectTrigger>
+                                <SelectTrigger className="w-full min-w-[320px] sm:min-w-[380px]">
                                   <SelectValue
                                     placeholder={t("selectProgram")}
                                   />
                                 </SelectTrigger>
                               </FormControl>
-                              <SelectContent>
+                              <SelectContent className="min-w-[320px] sm:min-w-[380px]">
                                 {programs.map((program) => (
                                   <SelectItem
                                     key={program.id}
                                     value={program.id.toString()}
+                                    className="py-3"
                                   >
-                                    {program.name}
-                                    {program.price_per_year &&
-                                      ` - €${program.price_per_year}/year`}
+                                    <span className="inline-flex flex-wrap items-baseline gap-x-1.5">
+                                      <span>{program.name}</span>
+                                      {program.is_thesis && (
+                                        <span className="text-muted-foreground">
+                                          – {program.is_thesis}
+                                        </span>
+                                      )}
+                                      {program.price_per_year != null && (
+                                        <span className="text-muted-foreground">
+                                          – €{program.price_per_year}/year
+                                        </span>
+                                      )}
+                                    </span>
                                   </SelectItem>
                                 ))}
                               </SelectContent>
