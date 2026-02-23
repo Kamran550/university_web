@@ -422,11 +422,6 @@ export default function TransferApplicationForm({
                                   >
                                     <span className="inline-flex flex-wrap items-baseline gap-x-1.5">
                                       <span>{program.name}</span>
-                                      {program.is_thesis && (
-                                        <span className="text-muted-foreground">
-                                          – {program.is_thesis}
-                                        </span>
-                                      )}
                                       {program.price_per_year != null && (
                                         <span className="text-muted-foreground">
                                           – €{program.price_per_year}/year
