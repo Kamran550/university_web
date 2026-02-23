@@ -10,5 +10,6 @@ export interface Degree {
 export enum DegreeType {
   Bachelor = "bachelor",
   Master = "master",
+  MasterWithoutThesis = "master_without_thesis",
   PhD = "phd",
 }
