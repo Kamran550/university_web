@@ -56,7 +56,7 @@ export default function TransferApplicationForm({
     if (degreeId === 1) return DegreeType.Bachelor;
     if (degreeId === 2) return DegreeType.Master;
     if (degreeId === 3) return DegreeType.PhD;
-    if (degreeId === 4) return DegreeType.MasterWithoutThesis;
+    if (degreeId === 5) return DegreeType.MasterWithoutThesis;
     throw new Error("Degree type not found");
   }
 
