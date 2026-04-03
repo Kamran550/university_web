@@ -12,28 +12,28 @@ export default function AdministrativeUnitsPage() {
   const staff = [
     {
       id: "vice-rector",
-      image: "/images/vice-rector.png",
+      image: "/images/user.png",
       positionKey: "viceRector.position",
       nameKey: "viceRector.name",
       emailKey: "viceRector.email",
     },
     {
       id: "rector-advisor",
-      image: "/images/rector-advisor.png",
+      image: "/images/user.png",
       positionKey: "rectorAdvisor.position",
       nameKey: "rectorAdvisor.name",
       emailKey: "rectorAdvisor.email",
     },
     {
       id: "secretary-general",
-      image: "/images/secretary-general.png",
+      image: "/images/user.png",
       positionKey: "secretaryGeneral.position",
       nameKey: "secretaryGeneral.name",
       emailKey: "secretaryGeneral.email",
     },
     {
       id: "office-director",
-      image: "/images/office-director.png",
+      image: "/images/user.png",
       positionKey: "officeDirector.position",
       nameKey: "officeDirector.name",
       emailKey: "officeDirector.email",
