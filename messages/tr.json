@@ -159,7 +159,7 @@
         "description": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak, uluslararası saygın bir akademisyen, yüksek öğretim lideri ve barış odaklı öğrenme savunucusudur. Kıtalar arası yirmi yılı aşkın bir kariyere sahip olan KORAL, Avrupa Uluslararası Barış Üniversitesi'ne (EIPU) akademik mükemmellik, küresel vizyon ve sosyal sorumluluk sahibi liderlerin bir sonraki neslini şekillendirme konusunda derin bir bağlılık getirmektedir.",
         "qualifications": "Dr. Mirosław Kędrzyński-Woźniak, barış ve çatışma çalışmaları, küresel diplomasi ve kültürlerarası iletişim alanlarında uzmanlaşmış Siyaset Bilimi ve Uluslararası İlişkiler alanında doktora derecesine sahiptir. Avrupa, Orta Asya ve Orta Doğu'daki tanınmış kurumlarda akademik ve idari pozisyonlar almıştır. Akademik yolculuğu, yüksek öğretimde diyalog, eleştirel düşünme ve etik liderliği teşvik etmeye odaklanmıştır.",
         "email": "E-posta",
-        "emailValue": "user.user@eipu.edu.pl"
+        "emailValue": "miroslaw.kedrzynski-wozniak@eipu.edu.pl"
       },
       "welcomeMessage": {
         "title": "Rektörden Hoş Geldiniz Mesajı",
@@ -183,22 +183,22 @@
       "viceRector": {
         "position": "Rektör Yardımcısı",
         "name": "Dr. Aleksandra Brzezińska-Kowalczyk",
-        "email": "user.user@eipu.edu.pl"
+        "email": "aleksandra.brzezinska-kowalczyk@eipu.edu.pl"
       },
       "rectorAdvisor": {
         "position": "Rektör Danışmanı",
         "name": "Mgr. Tomasz Zieliński-Radomski",
-        "email": "user.user@eipu.edu.pl"
+        "email": "tomasz.zielinski-radomski@eipu.edu.pl"
       },
       "secretaryGeneral": {
         "position": "Genel Sekreter",
         "name": "Mgr. Karolina Pawłowska-Mirecka",
-        "email": "user.user@eipu.edu.pl"
+        "email": "karolina.pawlowska-mirecka@eipu.edu.pl"
       },
       "officeDirector": {
         "position": "Ofis Yöneticisi",
         "name": "Dr. Łukasz Nowicki-Domański",
-        "email": "user.user@eipu.edu.pl"
+        "email": "lukasz.nowicki-domanski@eipu.edu.pl"
       }
     }
   },
@@ -692,7 +692,7 @@
       "required": "Zorunlu alan",
       "invalidEmail": "Geçersiz e-posta adresi",
       "emailTaken": "Bu e-posta adresi zaten sistemimizde bir öğrenci başvurusu ile ilişkilidir. Bu bir hata ise lütfen destek ekibimizle iletişime geçin veya farklı bir e-posta adresi kullanın.",
-    "submitting": "Gönderiliyor...",
+      "submitting": "Gönderiliyor...",
       "submit": "Başvuruyu Gönder",
       "submitSuccess": "Başvuru başarıyla gönderildi!",
       "submitError": "Başvuru gönderilemedi. Lütfen tekrar deneyin."

@@ -159,7 +159,7 @@
         "description": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak - всемирно уважаемый ученый, лидер высшего образования и сторонник обучения, ориентированного на мир. С карьерой, охватывающей более двух десятилетий на нескольких континентах, он привносит в Европейский Международный Университет Мира (EIPU) уникальное сочетание академического превосходства, глобального видения и глубокой приверженности формированию следующего поколения социально ответственных лидеров.",
         "qualifications": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak имеет докторскую степень в области политологии и международных отношений со специализацией в исследованиях мира и конфликтов, глобальной дипломатии и межкультурной коммуникации. Он занимал академические и административные должности в известных учреждениях в Европе, Центральной Азии и на Ближнем Востоке. Его академический путь отмечен постоянным фокусом на продвижении диалога, критического мышления и этического лидерства в высшем образовании.",
         "email": "Электронная почта",
-        "emailValue": "user.user@eipu.edu.pl"
+        "emailValue": "miroslaw.kedrzynski-wozniak@eipu.edu.pl"
       },
       "welcomeMessage": {
         "title": "Приветственное послание от Ректора",
@@ -183,22 +183,22 @@
       "viceRector": {
         "position": "Проректор",
         "name": "Dr. Aleksandra Brzezińska-Kowalczyk",
-        "email": "user.user@eipu.edu.pl"
+        "email": "aleksandra.brzezinska-kowalczyk@eipu.edu.pl"
       },
       "rectorAdvisor": {
         "position": "Советник Ректора",
         "name": "Mgr. Tomasz Zieliński-Radomski",
-        "email": "user.user@eipu.edu.pl"
+        "email": "tomasz.zielinski-radomski@eipu.edu.pl"
       },
       "secretaryGeneral": {
         "position": "Генеральный секретарь",
         "name": "Mgr. Karolina Pawłowska-Mirecka",
-        "email": "user.user@eipu.edu.pl"
+        "email": "karolina.pawlowska-mirecka@eipu.edu.pl"
       },
       "officeDirector": {
         "position": "Директор офиса",
         "name": "Dr. Łukasz Nowicki-Domański",
-        "email": "user.user@eipu.edu.pl"
+        "email": "lukasz.nowicki-domanski@eipu.edu.pl"
       }
     }
   },
