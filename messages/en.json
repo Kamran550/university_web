@@ -154,10 +154,10 @@
         "title": "Rector's Profile",
         "fullName": "Full Name",
         "position": "Position",
-        "fullNameValue": "Prof. Dr. Kenan Kerimov",
+        "fullNameValue": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak",
         "positionValue": "Rector of European International Peace University (EIPU)",
-        "description": "Prof. Dr. KENAN KERIMOV is an internationally respected academic, higher education leader, and advocate for peace-focused learning. With a career spanning more than two decades across multiple continents, he brings to the European International Peace University (EIPU) a unique blend of academic excellence, global vision, and a deep commitment to shaping the next generation of socially responsible leaders.",
-        "qualifications": "Dr. Kerimov holds a Ph.D. in Political Science and International Relations, with specializations in peace and conflict studies, global diplomacy, and intercultural communication. He has held academic and administrative positions at renowned institutions in Europe, Central Asia, and the Middle East. His academic journey is marked by a consistent focus on promoting dialogue, critical thinking, and ethical leadership in higher education.",
+        "description": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak is an internationally respected academic, higher education leader, and advocate for peace-focused learning. With a career spanning more than two decades across multiple continents, he brings to the European International Peace University (EIPU) a unique blend of academic excellence, global vision, and a deep commitment to shaping the next generation of socially responsible leaders.",
+        "qualifications": "Dr. Mirosław Kędrzyński-Woźniak holds a Ph.D. in Political Science and International Relations, with specializations in peace and conflict studies, global diplomacy, and intercultural communication. He has held academic and administrative positions at renowned institutions in Europe, Central Asia, and the Middle East. His academic journey is marked by a consistent focus on promoting dialogue, critical thinking, and ethical leadership in higher education.",
         "email": "Email",
         "emailValue": "user.user@eipu.edu.pl"
       },
@@ -169,7 +169,7 @@
         "paragraph3": "Together, we will work towards building a brighter future through learning, research, and collaboration. I am confident that your time here will be both rewarding and inspiring.",
         "closing": "Wishing you success and fulfillment in your studies and beyond.",
         "signature": "Sincerely,",
-        "signatureName": "Prof. Dr. KENAN KERIMOV",
+        "signatureName": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak",
         "signatureTitle": "Rector"
       },
       "tabs": {
@@ -182,22 +182,22 @@
       "subtitle": "Meet our dedicated administrative team committed to excellence and service",
       "viceRector": {
         "position": "Vice Rector",
-        "name": "User User",
+        "name": "Dr. Aleksandra Brzezińska-Kowalczyk",
         "email": "marlene.treiblach@eipu.edu.pl"
       },
       "rectorAdvisor": {
         "position": "Rector Advisor",
-        "name": "User User",
+        "name": "Mgr. Tomasz Zieliński-Radomski",
         "email": "user.user@eipu.edu.pl"
       },
       "secretaryGeneral": {
         "position": "Secretary General",
-        "name": "User User",
+        "name": "Mgr. Karolina Pawłowska-Mirecka",
         "email": "user.user@eipu.edu.pl"
       },
       "officeDirector": {
         "position": "Office Director",
-        "name": "User User",
+        "name": "Dr. Łukasz Nowicki-Domański",
         "email": "user.user@eipu.edu.pl"
       }
     }

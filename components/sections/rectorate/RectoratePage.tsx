@@ -109,7 +109,7 @@ export default function RectoratePage() {
                     <div className="relative z-10 w-full max-w-md">
                       <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white/50 dark:ring-slate-800/50">
                         <Image
-                          src="/images/rector.png"
+                          src="/images/user.png"
                           alt={t("profile.fullNameValue")}
                           fill
                           className="object-cover"
@@ -171,7 +171,7 @@ export default function RectoratePage() {
                         <div className="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg">
                           <Mail className="h-5 w-5 text-primary" />
                         </div>
-                        <div className="flex-1">
+                        {/* <div className="flex-1">
                           <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">
                             {t("profile.email")}
                           </p>
@@ -184,7 +184,7 @@ export default function RectoratePage() {
                               →
                             </span>
                           </a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
 

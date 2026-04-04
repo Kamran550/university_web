@@ -154,10 +154,10 @@
         "title": "Rektör Profili",
         "fullName": "Ad Soyad",
         "position": "Pozisyon",
-        "fullNameValue": "Prof. Dr. KENAN KERIMOV",
+        "fullNameValue": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak",
         "positionValue": "Avrupa Uluslararası Barış Üniversitesi (EIPU) Rektörü",
-        "description": "Prof. Dr. Kenan Kerimov, uluslararası saygın bir akademisyen, yüksek öğretim lideri ve barış odaklı öğrenme savunucusudur. Kıtalar arası yirmi yılı aşkın bir kariyere sahip olan KORAL, Avrupa Uluslararası Barış Üniversitesi'ne (EIPU) akademik mükemmellik, küresel vizyon ve sosyal sorumluluk sahibi liderlerin bir sonraki neslini şekillendirme konusunda derin bir bağlılık getirmektedir.",
-        "qualifications": "Dr. Kerimov, barış ve çatışma çalışmaları, küresel diplomasi ve kültürlerarası iletişim alanlarında uzmanlaşmış Siyaset Bilimi ve Uluslararası İlişkiler alanında doktora derecesine sahiptir. Avrupa, Orta Asya ve Orta Doğu'daki tanınmış kurumlarda akademik ve idari pozisyonlar almıştır. Akademik yolculuğu, yüksek öğretimde diyalog, eleştirel düşünme ve etik liderliği teşvik etmeye odaklanmıştır.",
+        "description": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak, uluslararası saygın bir akademisyen, yüksek öğretim lideri ve barış odaklı öğrenme savunucusudur. Kıtalar arası yirmi yılı aşkın bir kariyere sahip olan KORAL, Avrupa Uluslararası Barış Üniversitesi'ne (EIPU) akademik mükemmellik, küresel vizyon ve sosyal sorumluluk sahibi liderlerin bir sonraki neslini şekillendirme konusunda derin bir bağlılık getirmektedir.",
+        "qualifications": "Dr. Mirosław Kędrzyński-Woźniak, barış ve çatışma çalışmaları, küresel diplomasi ve kültürlerarası iletişim alanlarında uzmanlaşmış Siyaset Bilimi ve Uluslararası İlişkiler alanında doktora derecesine sahiptir. Avrupa, Orta Asya ve Orta Doğu'daki tanınmış kurumlarda akademik ve idari pozisyonlar almıştır. Akademik yolculuğu, yüksek öğretimde diyalog, eleştirel düşünme ve etik liderliği teşvik etmeye odaklanmıştır.",
         "email": "E-posta",
         "emailValue": "user.user@eipu.edu.pl"
       },
@@ -169,7 +169,7 @@
         "paragraph3": "Birlikte, öğrenme, araştırma ve işbirliği yoluyla daha parlak bir gelecek inşa etmeye çalışacağız. Buradaki zamanınızın hem ödüllendirici hem de ilham verici olacağına inanıyorum.",
         "closing": "Çalışmalarınızda ve ötesinde başarı ve tatmin dilerim.",
         "signature": "Saygılarımla,",
-        "signatureName": "Prof. Dr. Kenan Kerimov",
+        "signatureName": "Prof. Dr. hab. Mirosław Kędrzyński-Woźniak",
         "signatureTitle": "Rektör"
       },
       "tabs": {
@@ -182,22 +182,22 @@
       "subtitle": "Mükemmellik ve hizmete adanmış idari ekibimizle tanışın",
       "viceRector": {
         "position": "Rektör Yardımcısı",
-        "name": "User User",
+        "name": "Dr. Aleksandra Brzezińska-Kowalczyk",
         "email": "user.user@eipu.edu.pl"
       },
       "rectorAdvisor": {
         "position": "Rektör Danışmanı",
-        "name": "User User",
+        "name": "Mgr. Tomasz Zieliński-Radomski",
         "email": "user.user@eipu.edu.pl"
       },
       "secretaryGeneral": {
         "position": "Genel Sekreter",
-        "name": "User User",
+        "name": "Mgr. Karolina Pawłowska-Mirecka",
         "email": "user.user@eipu.edu.pl"
       },
       "officeDirector": {
         "position": "Ofis Yöneticisi",
-        "name": "User User",
+        "name": "Dr. Łukasz Nowicki-Domański",
         "email": "user.user@eipu.edu.pl"
       }
     }
