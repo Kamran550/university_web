@@ -11,9 +11,6 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      APP_DIR: /home/eipu/htdocs/eipu.edu.pl
-      SERVER: root@209.38.249.135
 
     steps:
       - uses: actions/checkout@v4
@@ -35,24 +32,56 @@ jobs:
         env:
           NEXT_PUBLIC_API_BASE_URL: https://backend.eipu.edu.pl/api/v1
 
-      - run: tar -czf next.tgz --exclude=.next/cache .next
+      # Yalnız hazır build (.next/cache olmadan) və public/
+      - run: tar -czf deploy.tgz --exclude=.next/cache .next public
 
       - name: Deploy to server
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          APP_DIR: ${{ secrets.APP_DIR }}
         run: |
           mkdir -p ~/.ssh
           printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_deploy
           chmod 600 ~/.ssh/id_deploy
-          SSH="-i $HOME/.ssh/id_deploy -o StrictHostKeyChecking=accept-new"
+          SSH_OPTS="-i $HOME/.ssh/id_deploy -o StrictHostKeyChecking=accept-new"
 
-          scp $SSH next.tgz $SERVER:/tmp/next.tgz
-          ssh $SSH $SERVER "set -e
-            cd $APP_DIR
-            git fetch origin main
-            git reset --hard origin/main
-            if ! git diff --quiet HEAD@{1} HEAD -- package-lock.json; then npm install --no-audit --no-fund; fi
-            rm -rf .next.new && mkdir .next.new
-            tar -xzf /tmp/next.tgz -C .next.new --strip-components=1
-            rm -rf .next && mv .next.new .next && rm /tmp/next.tgz
-            pm2 restart 0"
+          # Serverdə npm install yoxdur: paketlər dəyişibsə, deploy dayanır
+          PKG_SUM=$(cat package.json package-lock.json | sha256sum | cut -d' ' -f1)
+
+          scp $SSH_OPTS deploy.tgz "$SSH_USER@$SSH_HOST:/tmp/deploy.tgz"
+
+          # Serverdə: yeni .next və public qoyulur, köhnələri *.prev kimi saxlanılır, uğursuz olsa geri qaytarılır
+          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" bash -s -- "$APP_DIR" "$PKG_SUM" <<'EOF'
+          set -e
+          cd "$1"
+
+          if [ "$(cat package.json package-lock.json | sha256sum | cut -d' ' -f1)" != "$2" ]; then
+            rm -f /tmp/deploy.tgz
+            echo "package.json/package-lock.json serverdəkindən fərqlidir. Deploy dayandırıldı, heç nə dəyişmədi."
+            echo "Serverdə əl ilə: cd $1 && git pull origin main && npm install && pm2 restart 0 — sonra workflow-u yenidən işə salın."
+            exit 1
+          fi
+
+          rm -rf .deploy.new && mkdir .deploy.new
+          tar -xzf /tmp/deploy.tgz -C .deploy.new && rm -f /tmp/deploy.tgz
+          rm -rf .next.prev public.prev
+          mv .next .next.prev && mv public public.prev
+          mv .deploy.new/.next .next && mv .deploy.new/public public && rm -rf .deploy.new
+          pm2 restart 0
+
+          for i in $(seq 1 30); do
+            sleep 2
+            code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3000/ || true)
+            case "$code" in 2*|3*) echo "Health OK ($code)"; exit 0 ;; esac
+          done
+
+          echo "Health check uğursuz oldu, köhnə build bərpa olunur"
+          rm -rf .next public && mv .next.prev .next && mv public.prev public
+          pm2 restart 0
+          exit 1
+          EOF
+
+      - if: always()
+        run: rm -f ~/.ssh/id_deploy
