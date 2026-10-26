@@ -1,0 +1,58 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      APP_DIR: /home/eipu/htdocs/eipu.edu.pl
+      SERVER: root@209.38.249.135
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: nextjs-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: nextjs-${{ hashFiles('package-lock.json') }}-
+
+      - run: npm ci
+
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_API_BASE_URL: https://backend.eipu.edu.pl/api/v1
+
+      - run: tar -czf next.tgz --exclude=.next/cache .next
+
+      - name: Deploy to server
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          SSH="-i $HOME/.ssh/id_deploy -o StrictHostKeyChecking=accept-new"
+
+          scp $SSH next.tgz $SERVER:/tmp/next.tgz
+          ssh $SSH $SERVER "set -e
+            cd $APP_DIR
+            git fetch origin main
+            git reset --hard origin/main
+            if ! git diff --quiet HEAD@{1} HEAD -- package-lock.json; then npm install --no-audit --no-fund; fi
+            rm -rf .next.new && mkdir .next.new
+            tar -xzf /tmp/next.tgz -C .next.new --strip-components=1
+            rm -rf .next && mv .next.new .next && rm /tmp/next.tgz
+            pm2 restart 0"
