@@ -9,8 +9,8 @@ module.exports = {
       env: {
         NODE_ENV: "production",
         PORT: 3001,
-        // Linux-da HOSTNAME adətən maşının adıdır, server ona bind olmasın
-        HOSTNAME: "0.0.0.0",
+        // Yalnız lokal: tətbiqə internetdən birbaşa yox, nginx vasitəsilə çatılır
+        HOSTNAME: "127.0.0.1",
       },
     },
   ],
