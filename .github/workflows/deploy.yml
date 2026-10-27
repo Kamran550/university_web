@@ -32,8 +32,15 @@ jobs:
         env:
           NEXT_PUBLIC_API_BASE_URL: https://backend.eipu.edu.pl/api/v1
 
-      # Yalnız hazır build (.next/cache olmadan) və public/
-      - run: tar -czf deploy.tgz --exclude=.next/cache .next public
+      # Standalone build: server.js + lazım olan node_modules; static və public ayrıca kopyalanmalıdır
+      - name: Package standalone build
+        run: |
+          rm -rf release && mkdir release
+          cp -a .next/standalone/. release/
+          cp -a .next/static release/.next/static
+          cp -a public release/public
+          cp ecosystem.config.js release/
+          tar -czf deploy.tgz -C release .
 
       - name: Deploy to server
         env:
@@ -47,39 +54,49 @@ jobs:
           chmod 600 ~/.ssh/id_deploy
           SSH_OPTS="-i $HOME/.ssh/id_deploy -o StrictHostKeyChecking=accept-new"
 
-          # Serverdə npm install yoxdur: paketlər dəyişibsə, deploy dayanır
-          PKG_SUM=$(cat package.json package-lock.json | sha256sum | cut -d' ' -f1)
+          RELEASE="$(date -u +%Y%m%d%H%M%S)-${GITHUB_SHA::7}"
 
           scp $SSH_OPTS deploy.tgz "$SSH_USER@$SSH_HOST:/tmp/deploy.tgz"
 
-          # Serverdə: yeni .next və public qoyulur, köhnələri *.prev kimi saxlanılır, uğursuz olsa geri qaytarılır
-          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" bash -s -- "$APP_DIR" "$PKG_SUM" <<'EOF'
+          # Serverdə: releases/<ad> qovluğuna açılır, current symlink-i ona yönəlir; uğursuz olsa əvvəlki release-ə qaytarılır
+          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" bash -s -- "$APP_DIR" "$RELEASE" <<'EOF'
           set -e
           cd "$1"
+          RELEASE="$2"
 
-          if [ "$(cat package.json package-lock.json | sha256sum | cut -d' ' -f1)" != "$2" ]; then
-            rm -f /tmp/deploy.tgz
-            echo "package.json/package-lock.json serverdəkindən fərqlidir. Deploy dayandırıldı, heç nə dəyişmədi."
-            echo "Serverdə əl ilə: cd $1 && git pull origin main && npm install && pm2 restart 0 — sonra workflow-u yenidən işə salın."
-            exit 1
-          fi
+          mkdir -p "releases/$RELEASE"
+          tar -xzf /tmp/deploy.tgz -C "releases/$RELEASE"
+          rm -f /tmp/deploy.tgz
 
-          rm -rf .deploy.new && mkdir .deploy.new
-          tar -xzf /tmp/deploy.tgz -C .deploy.new && rm -f /tmp/deploy.tgz
-          rm -rf .next.prev public.prev
-          mv .next .next.prev && mv public public.prev
-          mv .deploy.new/.next .next && mv .deploy.new/public public && rm -rf .deploy.new
-          pm2 restart 0
+          PREV="$(readlink current 2>/dev/null || true)"
+
+          start_app() {
+            ln -sfn "$1" current
+            pm2 delete eipu-next >/dev/null 2>&1 || true
+            pm2 start "$PWD/current/ecosystem.config.js"
+          }
+
+          start_app "releases/$RELEASE"
 
           for i in $(seq 1 30); do
             sleep 2
-            code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3000/ || true)
-            case "$code" in 2*|3*) echo "Health OK ($code)"; exit 0 ;; esac
+            code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3001/ || true)
+            case "$code" in 2*|3*)
+              echo "Health OK ($code)"
+              pm2 save
+              # Son 3 release saxlanılır
+              ls -1d releases/*/ | sort | head -n -3 | xargs -r rm -rf
+              exit 0 ;;
+            esac
           done
 
-          echo "Health check uğursuz oldu, köhnə build bərpa olunur"
-          rm -rf .next public && mv .next.prev .next && mv public.prev public
-          pm2 restart 0
+          echo "Health check uğursuz oldu"
+          if [ -n "$PREV" ] && [ -d "$PREV" ]; then
+            echo "Əvvəlki release bərpa olunur: $PREV"
+            start_app "$PREV"
+            pm2 save
+          fi
+          rm -rf "releases/$RELEASE"
           exit 1
           EOF
 
